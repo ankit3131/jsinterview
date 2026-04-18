@@ -10,3 +10,5 @@ duplicateNum.push(arr[i])
     
 }
 console.log(duplicateNum);
+
+//output:- 1,2,3,4
