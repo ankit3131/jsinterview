@@ -7,22 +7,21 @@
 </head>
 <body>
     <script>
-       let arr = [3,4,5,6,1];
-let max = -1;
-let secondmax = -1;
-for(let i=0;i<arr.length;i++) {
+  
+let string = "ankit"
+let removStr = '';
+
+for(let i=0;i<string.length;i++) {
     debugger;
-    if(arr[i]>max) {
-        secondmax = max;
-        max = arr[i];
+    if(string[i] !== string[0]) {
+        debugger;
+        removStr += string[i]
+        // console.log(removStr);
+        // removStr++
+    
     }
-    if(arr[i]>secondmax && arr[i]<max) {
-        secondmax = arr[i]
-    }
-   
 }
-// console.log(max);
-console.log(secondmax);
+console.log(removStr)
     </script>
 </body>
 </html> 
