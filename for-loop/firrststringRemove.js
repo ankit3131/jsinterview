@@ -47,8 +47,6 @@ for(let i=0;i<string.length;i++) {
     debugger;
     if(string[i] !== string[0]) {
         removStr += string[i]
-        // console.log(removStr);
-        // removStr++
     
     }
 }
