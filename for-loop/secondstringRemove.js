@@ -21,14 +21,34 @@
 // }
 //  console.log(laststr)
 
+
 //outpu:- anki forloop conditon use 
 
 //solve3
-let str = "ankit"
-let laststr = []
+// let str = "ankit"
+// let laststr = []
 
-let split = str.split("");
-split.pop();
- console.log(split.join(""));
+// let split = str.split("");
+// split.pop();
+//  console.log(split.join(""));
 
  //output:- anki split use , join() can do use
+
+
+//  solve4
+// let str = "ankit"
+// let slice = str.slice(0, -1)
+// console.log(slice)
+
+//output:- anki split use , slice() can do use
+
+let str = "ankit"
+let slice = [];
+
+for(let i=0;i<str.length;i++) {
+    slice.push(str[i])
+}
+slice.pop();
+console.log(slice.join(""))
+
+//output:- ankit for-loop,push,pop can do use
