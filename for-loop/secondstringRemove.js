@@ -42,13 +42,20 @@
 
 //output:- anki split use , slice() can do use
 
-let str = "ankit"
-let slice = [];
+// let str = "ankit"
+// let slice = [];
 
-for(let i=0;i<str.length;i++) {
-    slice.push(str[i])
-}
-slice.pop();
-console.log(slice.join(""))
+// for(let i=0;i<str.length;i++) {
+//     slice.push(str[i])
+// }
+// slice.pop();
+// console.log(slice.join(""))
 
-//output:- ankit for-loop,push,pop can do use
+//output:- anki for-loop,push,pop can do use
+
+//solve 4
+// let str = "ankit"
+// for(let i=0;i<str.length-1;i++) {
+//     console.log(str[i])
+// }
+
