@@ -17,10 +17,10 @@
 
 // solve 2
 
-let str = ['a','n','t','t','k','i','t'];
+let str = ['a','n','t','t','k','t','i','t'];
 let str1 = [];
 for(let i=0;i<str.length;i++) {
-if(str[i] !== str[2] === str[i] !== str[3]) {
+if(str[i] !== str[2] || str[i] !== str[3]) {
     debugger;
 str1.push(str[i])
 }
@@ -33,7 +33,3 @@ console.log(str1);
 // output:- ankit so t was remove
 
 //
-
-
-
-
