@@ -8,14 +8,24 @@
 <body>
     <script>
 
-let str = ['a','n','t','t','k','i','t'];
-let str1 = [];
+let str = "822345664";
+let arr2 = [];
+let temp;
 for(let i=0;i<str.length;i++) {
-if(str[i] !== str[2] && str[i] !== str[3]) {
-str1.push(str[i])
+    arr2.push(str[i])
+    for(let j=i+1;j<str.length;j++) {
+        debugger;
+    if(str[i] < str[j+1]) {
+      temp = str[i]
+      str[i] = str[j+1]
+      str[j+1] = temp
+      arr2.push(str[i]);
+// console.log(arr2);
+    }
+    }
 }
-}
-console.log(str1);
+console.log(arr2);
+
 
     </script>
 </body>
