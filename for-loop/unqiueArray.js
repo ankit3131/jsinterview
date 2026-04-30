@@ -12,15 +12,23 @@
 
 // solve:-[ '1', '3', '4', '5' ]
 
-let str = "822345664";
-let arr2 = [];
-for(let i=0;i<str.length;i++) {
-    arr2.push(str[i])
-    for(let j=i+1;j<str.length;j++) {
+let str = "8223455";
+let arr2 = str.split("")
+let temp = []
+let arr = [];
+for(let i=0;i<arr2.length;i++) {
+    debugger
+    // arr2.push(str)
+    for(let j=i+1;j<arr2.length;j++) {
         debugger;
-    if(str[i] > str[j+1]) {
-console.log(arr2);
+    if(arr2[i] > arr2[j+1]) {
+      temp = arr2[i]
+      arr2[i] = arr2[j+1]
+      arr2[j+1] = temp
+arr.push(arr2[j]);  
     }
+    
     }
+    
 }
-// console.log(arr2);
+console.log(arr);
