@@ -8,6 +8,28 @@
 <body>
     <script>
 
+// let str = ['a','n','t','t','k','i','t'];
+// let str1 = [];
+// for(let i=0;i<str.length;i++) {
+// if(str[i] !== str[2] && str[i] !== str[3]) {
+// str1.push(str[i])
+// }
+// }
+// console.log(str1);
+let arr =  [1,2]
+let arr1 = [3,4]
+let sum = 0;
+let arr3 = [];
+
+for(let i=0;i<arr.length;i++) {
+for(let j=0;j<arr1.length;j++) {
+    if(arr[i] > arr[j])
+    debugger;
+    sum += arr[i] + arr1[j];
+    arr3.push(sum);
+    sum = 0;
+}}
+console.log(arr3)
 let str = "822345664";
 let arr2 = [];
 let temp;
@@ -29,4 +51,4 @@ console.log(arr2);
 
     </script>
 </body>
-</html> 
+</html>  
