@@ -7,27 +7,19 @@
 </head>
 <body>
     <script>
+let arr1 = [1,2,3,4]
+let arr2 = [3,4,5,6]
+let arr3 = [];
 
-let str = "822345664";
-let arr2 = [];
-let temp;
-for(let i=0;i<str.length;i++) {
-    arr2.push(str[i])
-    for(let j=i+1;j<str.length;j++) {
-        debugger;
-    if(arr2[i] > arr2[j+1]) {
-      temp = arr2[i]
-      arr2[i] = arr2[j+1]
-      arr2[j+1] = temp
-arr.push(arr2[j]);
- temp  = arr2[i]
+for(let i=0;i<arr1.length;i++) {
+    debugger;
+    for(let j=0;j<arr2.length;j++) {
+        if(arr1[i] === arr2[j]) {
+arr3.push(arr2[j])
+        }
     }
-    
-    }
-    
 }
-console.log(arr);
-
+console.log(arr3);
 
     </script>
 </body>
