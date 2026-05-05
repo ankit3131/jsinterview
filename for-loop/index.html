@@ -8,14 +8,12 @@
 <body>
     <script>
 
-let str = "8223455";
-let arr2 = str.split("")
-let temp = []
-let arr = [];
-for(let i=0;i<arr2.length;i++) {
-    debugger
-    // arr2.push(str)
-    for(let j=i+1;j<arr2.length;j++) {
+let str = "822345664";
+let arr2 = [];
+let temp;
+for(let i=0;i<str.length;i++) {
+    arr2.push(str[i])
+    for(let j=i+1;j<str.length;j++) {
         debugger;
     if(arr2[i] > arr2[j+1]) {
       temp = arr2[i]
@@ -33,4 +31,4 @@ console.log(arr);
 
     </script>
 </body>
-</html> 
+</html>  
