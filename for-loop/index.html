@@ -19,17 +19,20 @@ arr3.push(sum)
   }
 }
 } 
-for(let k=0;k<arr1.length;k++) {
-  debugger; 
-  for(let j=0;j<arr3.length;j++) {
-if(k !== j)
- {
-arr3.push(arr1[k])
- }  
+for(let k=arr3.length;k<arr1.length;k++) {
+  debugger;
+  arr3.push(arr1[k])
 }
-}
-console.log(arr3)
-
+console.log(arr3);
+// for(let j=0;j<arr1.length;j++) {
+  
+// for(let k=0;k<arr3.length;k++) {
+// if(k !== j)
+//  {
+// arr3.push(arr1[j])
+//  }  
+// }
+// }
     </script>
 </body>
 </html>  
