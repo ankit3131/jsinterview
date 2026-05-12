@@ -7,16 +7,17 @@
 </head>
 <body>
     <script>
-let name = ["ankit1","anniet2","anskirt3","anbkist4"];
-let string = name.join(",");
-console.log(typeof string);
-for(let i=0;i<string.length;i++) 
-{
-  if(string[i] === "a") { 
-// let remove = string.replace("a" , "");
-console.log(string);
-  } 
+let name = ["ankit","anniet","anskirt","anbkist"];
+let arr = []
+let str = "an";
+for(let i=0;i<name.length;i++) {
+if(name[i].startsWith(str)) {
+  debugger;
+  console.log(name[i].slice(2))
 }
+}
+
+
 
 // for(let j=0;j<arr1.length;j++) {
   
