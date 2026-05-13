@@ -16,15 +16,24 @@
 
 // output: [4,6]
 
-let name = ["ankit","anniet","anskirt","anbkist"];
-let arr = []
-let str = "an";
-for(let i=0;i<name.length;i++) {
-if(name[i].startsWith(str)) {
-  debugger;
-  console.log(name[i].slice(2))
-}
-}
+// let name = ["ankit","anniet","anskirt","anbkist"];
+// let arr = []
+// let str = "an";
+// for(let i=0;i<name.length;i++) {
+// if(name[i].startsWith(str)) {
+//   debugger;
+//   console.log(name[i].slice(2))
+// }
+// }
 
-//output i was use 1,2,3,4 but i used chatgpt used
+//output i was use ["kit","niet","skirt","bkist"] will be output
 
+// let name = ["ankit","anniet","anskirt","anbkist"]
+// let arr = [];
+// for(let i=0;i<name.length;i++) {
+//   let remove = name[i].replace("an" , "");
+//   arr.push(remove)
+// }
+// console.log(arr);
+
+//output i was use ["kit","niet","skirt","bkist"] will be output
