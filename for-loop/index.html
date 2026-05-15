@@ -7,16 +7,18 @@
 </head>
 <body>
     <script>
-let name = ["ankit","anniet","anskirt","anbkist"];
-let arr = []
-let str = "an";
-for(let i=0;i<name.length;i++) {
-if(name[i].startsWith(str)) {
-  debugger;
-  console.log(name[i].slice(1,2))
-}
-}
+let find = "I love javascript programming";
+let arr = "1";
 
+let split = find.split(" ");
+console.log(split)
+for(let i=0;i<split.length;i++) {
+    debugger;
+   if(split[i].length > arr.length) {
+    arr = split[i];
+   }
+}
+console.log(arr)
 
 
 // for(let j=0;j<arr1.length;j++) {
