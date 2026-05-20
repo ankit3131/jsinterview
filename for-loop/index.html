@@ -7,18 +7,25 @@
 </head>
 <body>
     <script>
-let num = [1,2,3,1]
-let logical = true;
-for(let i=0;i<num.length;i++) {
-    debugger;
-    for(let j=i+1;j<num .length;j++) {
-        
-        if(num[i] === num[j]) {
-            console.log(logical)
-            break;
-        }
+let nums = [0,1,0,3,12];
+
+let index = 0;
+
+for(let i = 0; i < nums.length; i++) {
+debugger;
+    if(nums[i] !== 0) {
+        nums[index] = nums[i];
+        index++;
     }
+
 }
+
+while(index < nums.length) {
+    nums[index] = 0;
+    index++;
+}
+
+console.log(nums);
 
 
 // for(let j=0;j<arr1.length;j++) {
