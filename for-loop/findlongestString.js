@@ -9,3 +9,6 @@ for(let i=0;i<split.length;i++) {
    }
 }
 console.log(arr)
+
+// programming output 
+
