@@ -16,23 +16,24 @@
 
 // output: [4,6]
 
-let arr =  [0,1]
-let arr1 = [1,1,3,4] 
-let arr3 = []
+// let name = ["ankit","anniet","anskirt","anbkist"];
+// let arr = []
+// let str = "an";
+// for(let i=0;i<name.length;i++) {
+// if(name[i].startsWith(str)) {
+//   debugger;
+//   console.log(name[i].slice(2))
+// }
+// }
 
-for(let i=0;i<arr.length;i++) {
-for(let j=0;j<arr1.length;j++) {
-  if(i === j) {
-let sum = arr[i] + arr1[j];
-arr3.push(sum)
-  }
-}
-} 
-for(let k=arr3.length;k<arr1.length;k++) {
-  debugger;
-  arr3.push(arr1[k])
-}
-console.log(arr3);
+//output i was use ["kit","niet","skirt","bkist"] will be output
 
-//output i was use 1,2,3,4 but i used chatgpt used
+// let name = ["ankit","anniet","anskirt","anbkist"]
+// let arr = [];
+// for(let i=0;i<name.length;i++) {
+//   let remove = name[i].replace("an" , "");
+//   arr.push(remove)
+// }
+// console.log(arr);
 
+//output i was use ["kit","niet","skirt","bkist"] will be output

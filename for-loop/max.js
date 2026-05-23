@@ -7,3 +7,5 @@ max = arr[i]
 }
 }
 console.log(max);
+
+// output:- 6
