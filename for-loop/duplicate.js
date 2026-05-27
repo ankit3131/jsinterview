@@ -24,15 +24,16 @@
 // solve3
 let arr = [1,2,2,2,3,2,3];
 let duplicate = [];
-let num = 0;
+let count = 0;
 for(let i=0;i<arr.length;i++) {
     for(let j=0;j<arr.length;j++) {
         debugger;
 if(arr[i] === arr[j])
 {
-    num++
+    count++
+    break;
 }
-if(num === 1) {
+if(count > 1) {
       debugger;
  duplicate.push(arr[i])
 }

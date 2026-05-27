@@ -4,7 +4,7 @@
     ];
     let role = [
         {role:'Developer'},
-        {role:'Developer'}
+        // {role:'Developer'}
     ]
   
   let arr = users.map((item , index) => {
