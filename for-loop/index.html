@@ -7,27 +7,38 @@
 </head>
 <body>
     <script>
-let arr = [1,2,2,2,3,2,3];
-let duplicate = [];
-let count = 0;
-for(let i=0;i<arr.length;i++) {
-    for(let j=i+1;j<arr.length;j++) {
-        debugger;
-if(arr[i] === arr[j])
-{
+let num = [-1,4,3,1]
+let num1 = []
+let count = 1;
+// let arr = [];
+for(let i=0;i<num.length;i++) {
+    for(let j=i+1;j<num.length;j++) {
+
+        if(num[i] >  num[j]) {
+let temp = num[i]
+num[i] = num[j]
+ num[j] = temp
+        }
+    }
+}
+num1.push(num)
+// console.log(num1);
+for(let j=0;j<num1.length;j++) {
     debugger;
-    count++
-    break;  
+
+if(count !== num1[j]) {
+    debugger;
+   count++; 
+   console.log(count);
+}
+// else
+// {
+//     debugger;
+//     console.log(count)
+//     count++;
+// }
 }
 
-    }
-    if(count >= 1 && arr[i]) {
-      debugger;
- duplicate.push(arr[i])
- count = 0;
-}
-}
-console.log(duplicate)
     </script>
 </body>
 </html>  
