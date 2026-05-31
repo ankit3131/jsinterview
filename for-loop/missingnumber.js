@@ -64,3 +64,20 @@
 // console.log(missing)
 
 ///output:- [ 0, 1, 4 ]
+
+// let arr = [-1,2,3,5,2]
+// let missing = [];
+// for(let i=0;i<6;i++) {
+// if(!missing.includes(i)) { 
+// missing.push(i)
+// }
+// }
+// // console.log(missing)
+
+// for(let i=0;i<missing.length;i++) {
+// if(!arr.includes(missing[i])){
+//     console.log(missing[i])
+// }
+// }
+
+////output:- 0,1,4
