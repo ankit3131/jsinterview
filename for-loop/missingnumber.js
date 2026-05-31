@@ -34,19 +34,33 @@
 ///count num:-5
 
 
-let num = [-1,1,2,4,3,6]
-let count = [];
-for(let i=1;i<=6;i++) {
-            let found = false;
-    for(let j=0;j<num.length;j++) {
-        if(num[j] === i) {
-            found = true;
-            break;
-        }
+// let num = [-1,1,2,4,3,6]
+// let count = [];
+// for(let i=1;i<=6;i++) {
+//             let found = false;
+//     for(let j=0;j<num.length;j++) {
+//         if(num[j] === i) {
+//             found = true;
+//             break;
+//         }
      
-    }
-       if(!found) {
-            count.push(i)
-        }
-}
-console.log(count)
+//     }
+//        if(!found) {
+//             count.push(i)
+//         }
+// }
+// console.log(count)
+
+////output[1,5]
+
+// let arr = [-1,2,2,3,5]
+// let arr1 = new Set(arr);
+// let missing = [];
+// for(let i=0;i<6;i++) {
+// if(!arr1.has(i)) {
+// missing.push(i)
+// }
+// }
+// console.log(missing)
+
+///output:- [ 0, 1, 4 ]

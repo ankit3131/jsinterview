@@ -4,7 +4,7 @@ let target = 8;
 for(let i=0;i<sum.length-1;i++) {
 total = total + sum[i];
 console.log(sum[i]);
-    // if(total === target) {
+    if(total === target) {
 
-    // }
+    }
 }

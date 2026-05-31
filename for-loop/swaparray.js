@@ -13,7 +13,7 @@
 // }
 // console.log(arr);
 
-////output:- [1,2,3,4]
+/// output:- [1,2,3,4]
 
 let arr = [4,2,10,1]
 arr.sort((a,b) => a-b)
@@ -21,3 +21,4 @@ arr.sort((a,b) => a-b)
 console.log(arr)
 
 ///output:- [1,2,4,10]
+
