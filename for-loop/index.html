@@ -7,23 +7,20 @@
 </head>
 <body>
     <script>
-let num = [-1,1,2,4,3,6]
-let count = [];
-for(let i=1;i<=6;i++) {
+
+let arr = [0,0,1,1,1,2,4]
+let arr1 = [];
+for(let i=0;i<arr.length;i++) 
+{
     debugger;
-            let found = false;
-    for(let j=0;j<num.length;j++) {
-        if(num[j] === i) {
-            found = true;
-            break;
+    for(let j=0;j<arr.length;j++) {
+        debugger;
+        if(!arr1.includes(arr[i])) {
+            arr1.push(arr[i])
         }
-     
     }
-       if(!found) {
-            count.push(i)
-        }
 }
-console.log(count)
+console.log(arr1)
 
 // let num = [1,2,3,4,5,6];
 // let num1 = [5,6]
