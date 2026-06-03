@@ -8,19 +8,25 @@
 <body>
     <script>
 
-const str = "aabbcde";
-const arr = [];
-// const arr = str.split(" ")
-for(let i=0;i<str.length;i++) {
-    if(str[i] === str[i+1]) {
-        debugger;
-    }
-    if(str[i] !== str[i+1]) {
-arr.push(str[i])
+const arr = [5, 10, 20];
+let infiniex = -Infinity;;
+let secondvalue =  -Infinity;;
 
-    }
+for(let i=0;i<arr.length;i++) {
+  debugger;
+if(arr[i] > infiniex) {
+infiniex = arr[i]
+secondvalue = infiniex;
 }
-console.log(arr)
+else if(arr[i] > secondvalue) {
+  debugger;
+secondvalue = arr[i]
+}
+}
+
+console.log(secondvalue);
+
+// output 15 refrence on chatgpt
 
 // let num = [1,2,3,4,5,6];
 // let num1 = [5,6]
