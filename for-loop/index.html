@@ -42,15 +42,40 @@
 //        }
 //     }
 
-let str = "pwwkew";
-for(let i=0;i<str.length;i++) {
-    for(let j=i+1;j<str.length;j++) {
-        if(str[i] !== str[j]) {
-            debugger;
-            console.log(str[i] , str[j]) 
+// let str = "pwwkew";
+// let count = [];
+// for(let i=0;i<str.length;i++) {
+//     debugger;
+//   if(str[i] !== str[i+1]) {
+
+//     // console.log(str[i] , str[i+1])
+//   }
+//   if(str[i] === str[i+1]) {
+//     continue;
+//   }
+// }
+
+
+        let arr = [1,2,3,5,2,4,3];
+        let count = 0;
+        let arr1 = [];
+        for(let i=0;i<arr.length;i++) {
+            count = arr[i+1];
+            if(i === count) {
+                debugger;
+                continue;
+            }
+            if(i !== count) {
+                debugger;
+                count = arr[i]
+                arr1.push(count)
+            }
         }
-    }
-}
+        console.log(arr1);
+
+////output:-[1,2,3,4]
+
+//output:- 3
     </script>
 </body>
 </html>  
