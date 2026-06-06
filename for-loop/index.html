@@ -42,37 +42,33 @@
 //        }
 //     }
 
-// let str = "pwwkew";
-// let count = [];
-// for(let i=0;i<str.length;i++) {
-//     debugger;
-//   if(str[i] !== str[i+1]) {
+// i = p !== 1 && w !== 2  
+// j = w 
+//  p !== w , pw  , p !== w , w !== w, pw = 1
+let str = "pwwkew";  
+let count = [];
+let counts = 0;
+for(let i=0;i<str.length;i++) {
+    for(let j=i+1;j<str.length;j++) {
+if(str[i] !== str[j+1]) {
+    debugger;
+count.push(str[i] , str[j])
 
-//     // console.log(str[i] , str[i+1])
-//   }
-//   if(str[i] === str[i+1]) {
-//     continue;
-//   }
+  }
+  for(let k =0;k<count.length;k++) {
+    if(count[k] !== str[j+2] || count[k+1] !== str[j+2]) {
+break;
+    }
+    counts++
+  }
+// if(str[i] === str[i+1]) {
+//    continue;
 // }
+}
+    }
+  
 
-
-        let arr = [1,2,3,5,2,4,3];
-        let count = 0;
-        let arr1 = [];
-        for(let i=0;i<arr.length;i++) {
-            count = arr[i+1];
-            if(i === count) {
-                debugger;
-                continue;
-            }
-            if(i !== count) {
-                debugger;
-                count = arr[i]
-                arr1.push(count)
-            }
-        }
-        console.log(arr1);
-
+console.log(counts)
 ////output:-[1,2,3,4]
 
 //output:- 3
