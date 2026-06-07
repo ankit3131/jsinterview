@@ -42,33 +42,52 @@
 //        }
 //     }
 
-// i = p !== 1 && w !== 2  
-// j = w 
-//  p !== w , pw  , p !== w , w !== w, pw = 1
-let str = "pwwkew";  
-let count = [];
-let counts = 0;
-for(let i=0;i<str.length;i++) {
-    for(let j=i+1;j<str.length;j++) {
-if(str[i] !== str[j+1]) {
-    debugger;
-count.push(str[i] , str[j])
+//not duplicate value one time [a,b,c] [b,c,a],[c,a,b]
 
-  }
-  for(let k =0;k<count.length;k++) {
-    if(count[k] !== str[j+2] || count[k+1] !== str[j+2]) {
-break;
+let str = "abcab";
+let count = 0;
+for(let i=0;i<str.length;i++) {
+    let arr = [];
+    for(let j=i;j<str.length;j++) {
+        debugger;
+        if(arr.includes(str[j])) {  
+            break;
+        }
+        if(count<3) {
+        arr.push(str[j])
+        }
+        if(count>3) {
+            break;
+        }
+
     }
-    counts++
-  }
-// if(str[i] === str[i+1]) {
-//    continue;
-// }
+    if(count<3) {
+    console.log(arr);
+    count++
+    }
 }
-    }
+// let str = "pwwkew";  
+// let counts = 0;
+// for(let i=0;i<str.length;i++) {
+//     let count = [];
+//     debugger;
+//     for(let j=i+1;j<str.length;j++) {
+// if(str[i] !== str[j]) {
+//     count.push(str[i])
+
+//     debugger;
+// break;
+//   }
+//   if(str[i] === str[j]) {
+//     count.push(str[i])
+//     break;
+//   }
+// }
+// console.log(count)
+
+//     }
   
 
-console.log(counts)
 ////output:-[1,2,3,4]
 
 //output:- 3
