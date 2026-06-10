@@ -42,19 +42,50 @@
 //        }
 //     }
 
-// let str = "pwwkew";
-// let count = [];
-// for(let i=0;i<str.length;i++) {
-//     debugger;
-//   if(str[i] !== str[i+1]) {
+//not duplicate value one time [a,b,c] [b,c,a],[c,a,b]
 
-//     // console.log(str[i] , str[i+1])
+let str = "abcab";
+let count = 0;
+for(let i=0;i<str.length;i++) {
+    let arr = [];
+    for(let j=i;j<str.length;j++) {
+        debugger;
+        if(arr.includes(str[j])) {  
+            break;
+        }
+        if(count<3) {
+        arr.push(str[j])
+        }
+        if(count>3) {
+            break;
+        }
+
+    }
+    if(count<3) {
+    console.log(arr);
+    count++
+    }
+}
+// let str = "pwwkew";  
+// let counts = 0;
+// for(let i=0;i<str.length;i++) {
+//     let count = [];
+//     debugger;
+//     for(let j=i+1;j<str.length;j++) {
+// if(str[i] !== str[j]) {
+//     count.push(str[i])
+
+//     debugger;
+// break;
 //   }
-//   if(str[i] === str[i+1]) {
-//     continue;
+//   if(str[i] === str[j]) {
+//     count.push(str[i])
+//     break;
 //   }
 // }
+// console.log(count)
 
+<<<<<<< HEAD
 
         // let arr = [1,2,3,5,2,4,3];
         // let count = 0;
@@ -74,6 +105,10 @@
         // console.log(arr1);
 
    
+=======
+//     }
+  
+>>>>>>> 2ad5ae8e590118b1eb3d4759d2cd51e3c078cf57
 
 ////output:-[1,2,3,4]
 
