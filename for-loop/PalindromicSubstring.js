@@ -22,3 +22,26 @@ debugger;
   
  
 // output:-"bab"
+
+
+function longestPalindrome(str) {
+  let longest = "";
+debugger;
+  for (let i = 0; i < str.length; i++) {
+    for (let j = i + 1; j <= str.length; j++) {
+      let sub = str.slice(i, j);
+debugger;
+
+      if (
+        sub === sub.split("").reverse().join("") &&
+        sub.length > longest.length
+      ) {
+        longest = sub;
+      }
+    }
+  }
+
+  return longest;
+}
+
+console.log(longestPalindrome("babad")); // "bab" or "aba"
