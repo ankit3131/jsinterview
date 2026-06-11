@@ -44,28 +44,28 @@
 
 //not duplicate value one time [a,b,c] [b,c,a],[c,a,b]
 
-let str = "abcab";
-let count = 0;
-for(let i=0;i<str.length;i++) {
-    let arr = [];
-    for(let j=i;j<str.length;j++) {
-        debugger;
-        if(arr.includes(str[j])) {  
-            break;
-        }
-        if(count<3) {
-        arr.push(str[j])
-        }
-        if(count>3) {
-            break;
-        }
+// let str = "abcab";
+// let count = 0;
+// for(let i=0;i<str.length;i++) {
+//     let arr = [];
+//     for(let j=i;j<str.length;j++) {
+//         debugger;
+//         if(arr.includes(str[j])) {  
+//             break;
+//         }
+//         if(count<3) {
+//         arr.push(str[j])
+//         }
+//         if(count>3) {
+//             break;
+//         }
 
-    }
-    if(count<3) {
-    console.log(arr);
-    count++
-    }
-}
+//     }
+//     if(count<3) {
+//     console.log(arr);
+//     count++
+//     }
+// }
 // let str = "pwwkew";  
 // let counts = 0;
 // for(let i=0;i<str.length;i++) {
@@ -85,34 +85,52 @@ for(let i=0;i<str.length;i++) {
 // }
 // console.log(count)
 
-<<<<<<< HEAD
-
-        // let arr = [1,2,3,5,2,4,3];
-        // let count = 0;
-        // let arr1 = [];
-        // for(let i=0;i<arr.length;i++) {
-        //     count = arr[i+1];
-        //     if(i === count) {
-        //         debugger;
-        //         continue;
-        //     }
-        //     if(i !== count) {
-        //         debugger;
-        //         count = arr[i]
-        //         arr1.push(count)
-        //     }
-        // }
-        // console.log(arr1);
-
-   
-=======
 //     }
   
->>>>>>> 2ad5ae8e590118b1eb3d4759d2cd51e3c078cf57
 
 ////output:-[1,2,3,4]
 
 //output:- 3
+
+// let arr1 = [1,20,5];
+// let arr2 = [2,5,3];
+// let add = [];
+// let sum = 0;
+// for(let i=0;i<arr1.length;i++) {
+//     debugger;
+//     sum = arr1[i] + arr2[i]
+//      add.push(sum);
+// }
+// for(let i=sum.length-1;i>0;i--) {
+//     debugger;
+//     if(sum[i] > 10) {
+//         debugger;
+// sum[i] = Math.floor(sum[i] % 10)
+// sum[i-1] = sum[i] / 10
+//     }
+   
+// }
+// console.log(add);
+
+let arr = [1,1,1,1,2,3,4,4]
+let arr1 = []
+for(let i=0;i<arr.length;i++) {
+    let logic = false;
+    for(let j=0;j<arr1.length;j++) {
+           if(arr[i] === arr1[j]) {
+             logic = true;
+            break
+           
+           }  
+    }
+    if(!logic) {
+      arr1.push(arr[i])
+    }
+   
+            // break;
+    }
+console.log(arr1)
+//output:-[1,2,3,4]
     </script>
 </body>
 </html>  
