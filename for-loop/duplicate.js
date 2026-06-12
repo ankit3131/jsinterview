@@ -22,21 +22,21 @@
 // output:-2,3
 
 // solve3
-let arr = [1,2,2,2,3,2,3];
-let duplicate = [];
-let count = 0;
+let arr = [1,1,1,1,2,2,2,3,4,4];
+let arr1 = []
 for(let i=0;i<arr.length;i++) {
-    for(let j=0;j<arr.length;j++) {
-        debugger;
-if(arr[i] === arr[j])
-{
-    count++
-    break;
-}
-if(count > 1) {
-      debugger;
- duplicate.push(arr[i])
-}
+    let logic = false;
+    for(let j=0;j<arr1.length;j++) {
+           if(arr[i] === arr1[j]) {
+             logic = true;
+            break
+           
+           }  
     }
-}
-console.log(duplicate)
+    if(!logic) {
+      arr1.push(arr[i])
+    }
+   
+            // break;
+    }
+console.log(arr1)
