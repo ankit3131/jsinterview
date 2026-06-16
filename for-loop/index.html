@@ -127,45 +127,88 @@
 
 // }
 
-let arr = "babad";
-let longestPalindrome = "";
+// let arr = "babad";
+// let longestPalindrome = "";
 
-for(let i = 0; i < arr.length; i++) {
-      debugger;
-    for(let j = i + 1; j <= arr.length; j++) {
+// for(let i = 0; i < arr.length; i++) {
+//       debugger;
+//     for(let j = i + 1; j <= arr.length; j++) {
         
-        // Convert to array-like structure manually
-        let tempStr = "";
-        for(let k = i; k < j; k++) {
-            tempStr += arr[k];
-        }
+//         // Convert to array-like structure manually
+//         let tempStr = "";
+//         for(let k = i; k < j; k++) {
+//             tempStr += arr[k];
+//         }
         
-        // Check palindrome manually by comparing characters
-        let isPal = true;
-        let left = 0;
-        let right = tempStr.length - 1;
+//         // Check palindrome manually by comparing characters
+//         let isPal = true;
+//         let left = 0;
+//         let right = tempStr.length - 1;
         
-        while(left < right) {
-            debugger;
-            // Compare characters without charAt() - using array indexing
-            if(tempStr[left] !== tempStr[right]) {
-                isPal = false;
-                break;
-            }
-            left++;
-            right--;
-        }
+//         while(left < right) {
+//             debugger;
+//             // Compare characters without charAt() - using array indexing
+//             if(tempStr[left] !== tempStr[right]) {
+//                 isPal = false;
+//                 break;
+//             }
+//             left++;
+//             right--;
+//         }
         
-        if(isPal && tempStr.length > 1) {
-            console.log(tempStr);
-            if(tempStr.length > longestPalindrome.length) {
-                longestPalindrome = tempStr;
-            }
-        }
+//         if(isPal && tempStr.length > 1) {
+//             console.log(tempStr);
+//             if(tempStr.length > longestPalindrome.length) {
+//                 longestPalindrome = tempStr;
+//             }
+//         }
+//     }
+// }
+
+// console.log("Longest:", longestPalindrome);
+
+
+// let arr = "egg";
+// let string = "ade";
+
+// let arr1 = arr.split("");
+// let arr2 = string.split("");
+// let logic = true;
+// for(let i=0;i<arr1.length;i++) {
+//     debugger;
+//     for(let j=0;j<arr2.length;j++){
+//  if(arr1[i] !== arr2[j]){
+//     // console.log("logic",logic)
+//     continue;
+//  }
+//  else if(arr[i] === arr2[j]){
+//     debugger;
+//     logic = false;
+// console.log("logic", logic)
+// break;
+//  }
+//     }
+   
+// }
+
+function isomorphic(arr,string){
+    let logic = true;
+    if(arr.length !== string.length) return !logic
+    for(let i=0;i<arr.length;i++) {
+        debugger;
+    let arrindex = arr.indexOf(arr[i]);
+    let stringIndex = string.indexOf(string[i]);
+    if(arrindex !== stringIndex) {
+        return false
+console.log(arrindex , stringIndex);
     }
 }
-
-console.log("Longest:", longestPalindrome);
+return true;
+}
+let arr = "egi"
+let string = "ade"
+console.log(isomorphic(arr,string))
+// console.log(arr1,arr2)
     </script>
 </body>
 </html>  
