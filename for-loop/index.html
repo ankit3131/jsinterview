@@ -127,45 +127,72 @@
 
 // }
 
-let arr = "babad";
-let longestPalindrome = "";
+// let arr = "babad";
+// let longestPalindrome = "";
 
-for(let i = 0; i < arr.length; i++) {
-      debugger;
-    for(let j = i + 1; j <= arr.length; j++) {
+// for(let i = 0; i < arr.length; i++) {
+//       debugger;
+//     for(let j = i + 1; j <= arr.length; j++) {
         
-        // Convert to array-like structure manually
-        let tempStr = "";
-        for(let k = i; k < j; k++) {
-            tempStr += arr[k];
-        }
+//         // Convert to array-like structure manually
+//         let tempStr = "";
+//         for(let k = i; k < j; k++) {
+//             tempStr += arr[k];
+//         }
         
-        // Check palindrome manually by comparing characters
-        let isPal = true;
-        let left = 0;
-        let right = tempStr.length - 1;
+//         // Check palindrome manually by comparing characters
+//         let isPal = true;
+//         let left = 0;
+//         let right = tempStr.length - 1;
         
-        while(left < right) {
-            debugger;
-            // Compare characters without charAt() - using array indexing
-            if(tempStr[left] !== tempStr[right]) {
-                isPal = false;
-                break;
-            }
-            left++;
-            right--;
-        }
+//         while(left < right) {
+//             debugger;
+//             // Compare characters without charAt() - using array indexing
+//             if(tempStr[left] !== tempStr[right]) {
+//                 isPal = false;
+//                 break;
+//             }
+//             left++;
+//             right--;
+//         }
         
-        if(isPal && tempStr.length > 1) {
-            console.log(tempStr);
-            if(tempStr.length > longestPalindrome.length) {
-                longestPalindrome = tempStr;
-            }
-        }
+//         if(isPal && tempStr.length > 1) {
+//             console.log(tempStr);
+//             if(tempStr.length > longestPalindrome.length) {
+//                 longestPalindrome = tempStr;
+//             }
+//         }
+//     }
+// }
+
+// console.log("Longest:", longestPalindrome);
+
+
+
+function string(str) {
+let count = 1;
+let total = 1;
+// let arr = str.split('')
+for(let i=0;i<str.length;i++) {
+    if(str[i] === str[i+1]) { 
+        debugger;
+  count++;
+    if(count>=total){
+total = count;
+    }
+    }
+  
+    else {
+       count = 1;
     }
 }
+ console.log(total);
+//  return total;
+// return count;
+}
+console.log(string('bbbabbbbbbb'));
 
-console.log("Longest:", longestPalindrome);
+// for(let i=0;)
     </script>
 </body>
-</html>  
+</html> 

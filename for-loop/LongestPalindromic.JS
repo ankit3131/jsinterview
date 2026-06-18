@@ -1,26 +1,24 @@
 
 function string(str) {
 let count = 1;
-let total = 1;
 let arr = str.split('')
 for(let i=0;i<arr.length;i++) {
-    if(arr[i] === arr[i+1]) { 
+    if(arr[i] === arr[i+1]) {
         debugger;
-  count++;
-    if(count>=total){
-total = count;
+      count++
     }
-    }
-  
-    else {
-       count = 1;
+    else{
+        count = 0;
     }
 }
- console.log(total);
-//  return total;
+ console.log(count);
+ return count;
 // return count;
 }
-console.log(string('bbbabbbbbbb'));
+
+ 
+console.log(string('bbbab'));
+
 
 
 
