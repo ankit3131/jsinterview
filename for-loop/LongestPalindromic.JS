@@ -15,7 +15,7 @@ for(let i=0;i<arr.length;i++) {
  return count;
 // return count;
 }
-
+                                                                                                                                                                    
  
 console.log(string('bbbab'));
 
