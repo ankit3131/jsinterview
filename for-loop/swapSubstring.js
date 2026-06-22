@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 function string(str) {
  let sorts = str.split('').sort();
  let count = 1;
@@ -20,5 +18,3 @@ else{
 }
                                                                                                                                                              
 console.log(string("ababaecefd"));
-
->>>>>>> 97170f1ba188675ca44dd51c3b39a983b5643656
