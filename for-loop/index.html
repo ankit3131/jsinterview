@@ -166,95 +166,49 @@
 // }
 
 // console.log("Longest:", longestPalindrome);
-// let a = 4;
-// let b = 4;
-// let c = 4;
 
-// let result = "";
 
-// for(let i=0;i<12;i++) {
-// debugger;
-//     // increasing
-//     if (a > 0) {
-//         result += "a";
-//         a--;
+// let arr = "egg";
+// let string = "ade";
+
+// let arr1 = arr.split("");
+// let arr2 = string.split("");
+// let logic = true;
+// for(let i=0;i<arr1.length;i++) {
+//     debugger;
+//     for(let j=0;j<arr2.length;j++){
+//  if(arr1[i] !== arr2[j]){
+//     // console.log("logic",logic)
+//     continue;
+//  }
+//  else if(arr[i] === arr2[j]){
+//     debugger;
+//     logic = false;
+// console.log("logic", logic)
+// break;
+//  }
 //     }
-
-//     if (b > 0) {
-//         result += "b";
-//         b--;
-//     }
-
-//     if (c > 0) {
-//         result += "c";
-//         c--;
-//     }
-
-//     // decreasing
-//     if (c > 0) {
-//         debugger;
-//         result += "c";
-//         c--;
-//     }
-
-//     if (b > 0) {
-//         result += "b";
-//         b--;
-//     }
-
-//     if (a > 0) {
-//         result += "a";
-//         a--;
-//     }
-// }
-
-// // console.log(result);
-// function words(string){
-//     let arr = [];
-// for(let i=0;i<string.length;i++) {
-//  for(let j=0;j<=string.length;j++) {
-//     if(i !== j && string[i].includes(string[j])){
-//         arr.push(string[j]);
-//         break;
-//     }
-//  }   
-// }
-// return arr;
-// }
-// console.log(words(["mass","as","hero","superhero"]));
-
-// function name(num) {
-//     debuggerr;
-//     for(let i=0;i<num.length;i++){
-//         console.log(num);
-//     }
-// }
-// console.log(name[1,1,1,2,3,3,4])
-
-function word(string) {
-    debugger;
-    let count = 0;
-    for(let i=0;i<string.length;i++) {
-        debugger;
-         let temp = "";
-        for(let j=i;j<string.length;j++) {
    
-    temp = string[j] + temp;
-    if("aeiou".includes(temp[0] )) {
-       count++; 
+// }
+function arr1(str) {
+    let count = [];
+    
+    for (let i = 0; i < str.length; i++) {
+        count.push(str[i]);
     }
-// arr1 = arr;
-// arr1.push(string);
-// console.log(temp);
-        }
-        // console.log(string[i])
-    }
+    
     return count;
-    // console.log(count);
 }
-let total = word("abaio");
-console.log(total)
 
+let arr = arr1("codeleet");
+let indices = [4, 5, 6, 7, 0, 2, 1, 3];
+
+let result = [];
+for(let i=0;i<arr.length;i++) {
+    result[indices[i]] = arr[i];
+}
+console.log(result);
+// console.log(arr1,arr2)
     </script>
 </body>
 </html> 
