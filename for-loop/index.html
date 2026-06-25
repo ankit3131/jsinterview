@@ -190,24 +190,26 @@
 //     }
    
 // }
-function arr1(str) {
-    let count = [];
-    
-    for (let i = 0; i < str.length; i++) {
-        count.push(str[i]);
+    function string(word) {
+        let count = 1;
+        
+        for(let i=0;i<word.length;i++) {
+            debugger;
+            let spiltes = word[i].split(" ");
+            // console.log(spiltes);
+            debugger;
+        
+    if(spiltes.length>count) {   
+        debugger;
+        count = spiltes.length;
+        //  console.log(count.length);
     }
-    
-    return count;
-}
+        }
+        return count;
+    }
 
-let arr = arr1("codeleet");
-let indices = [4, 5, 6, 7, 0, 2, 1, 3];
-
-let result = [];
-for(let i=0;i<arr.length;i++) {
-    result[indices[i]] = arr[i];
-}
-console.log(result);
+    let arr = string(["alice and bob love leetcode", "i think so too", "this is great thanks very much"]);
+    console.log(arr);
 // console.log(arr1,arr2)
     </script>
 </body>
