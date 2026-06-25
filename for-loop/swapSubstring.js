@@ -1,7 +1,3 @@
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
 function string(str) {
  let sorts = str.split('').sort();
  let count = 1;
