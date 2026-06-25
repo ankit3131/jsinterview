@@ -155,6 +155,7 @@
 //             left++;
 //             right--;
 //         }
+<<<<<<< HEAD
         
 //         if(isPal && tempStr.length > 1) {
 //             console.log(tempStr);
@@ -208,7 +209,64 @@ return true;
 let arr = "egi"
 let string = "ade"
 console.log(isomorphic(arr,string))
+=======
+        
+//         if(isPal && tempStr.length > 1) {
+//             console.log(tempStr);
+//             if(tempStr.length > longestPalindrome.length) {
+//                 longestPalindrome = tempStr;
+//             }
+//         }
+//     }
+// }
+
+// console.log("Longest:", longestPalindrome);
+
+
+// let arr = "egg";
+// let string = "ade";
+
+// let arr1 = arr.split("");
+// let arr2 = string.split("");
+// let logic = true;
+// for(let i=0;i<arr1.length;i++) {
+//     debugger;
+//     for(let j=0;j<arr2.length;j++){
+//  if(arr1[i] !== arr2[j]){
+//     // console.log("logic",logic)
+//     continue;
+//  }
+//  else if(arr[i] === arr2[j]){
+//     debugger;
+//     logic = false;
+// console.log("logic", logic)
+// break;
+//  }
+//     }
+   
+// }
+    function string(word) {
+        let count = 1;
+        
+        for(let i=0;i<word.length;i++) {
+            debugger;
+            let spiltes = word[i].split(" ");
+            // console.log(spiltes);
+            debugger;
+        
+    if(spiltes.length>count) {   
+        debugger;
+        count = spiltes.length;
+        //  console.log(count.length);
+    }
+        }
+        return count;
+    }
+
+    let arr = string(["alice and bob love leetcode", "i think so too", "this is great thanks very much"]);
+    console.log(arr);
+>>>>>>> develop
 // console.log(arr1,arr2)
     </script>
 </body>
-</html>  
+</html> 

@@ -20,6 +20,10 @@
     console.log(arr);;
 
 
+<<<<<<< HEAD
 // otuput:-6 all most clear
 
 ///////count
+=======
+// otuput:-6 all most clear
+>>>>>>> develop
