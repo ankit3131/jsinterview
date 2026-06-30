@@ -19,7 +19,7 @@
     // }
 
     // let arr = string(["alice and bob love leetcode", "i think so too", "this is great thanks very much"]);
-    // console.log(arr);;
+    // console.log(arr);
 
 
 // otuput:-6 all most clear
@@ -29,15 +29,9 @@ function string(word) {
     let arr1 = [];
     let temp = ""
     for(let i=0;i<word.length;i++) {
-        for(let j=0;j<=word[i].length;j++) {
-            if(word[i][j] !== " "){
-temp += word[i][j]
+            if(word[i].split(" ")){
+arr1.push(word[i]);
             }
-            else{
-                arr1.push(temp);
-                temp="";
-            }
-        }
         // console.log(word[i])
     }
     return arr1;

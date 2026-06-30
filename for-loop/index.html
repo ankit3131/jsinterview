@@ -51,13 +51,13 @@
 //     for(let j=i;j<str.length;j++) {
 //         debugger;
 //         if(arr.includes(str[j])) {  
-//             break;
+//            
 //         }
 //         if(count<3) {
 //         arr.push(str[j])
 //         }
 //         if(count>3) {
-//             break;
+//            
 //         }
 
 //     }
@@ -76,11 +76,11 @@
 //     count.push(str[i])
 
 //     debugger;
-// break;
+//
 //   }
 //   if(str[i] === str[j]) {
 //     count.push(str[i])
-//     break;
+//    
 //   }
 // }
 // console.log(count)
@@ -150,7 +150,7 @@
 //             // Compare characters without charAt() - using array indexing
 //             if(tempStr[left] !== tempStr[right]) {
 //                 isPal = false;
-//                 break;
+//                
 //             }
 //             left++;
 //             right--;
@@ -185,37 +185,46 @@
 //     debugger;
 //     logic = false;
 // console.log("logic", logic)
-// break;
+//
 //  }
 //     }
    
 // }
- function string(word) {
-    debugger;
-    let arr1 = [];
-   
-    for(let i=0;i<word.length;i++) {
-        let result = [];
-         let temp = ""
-        debugger;
-        for(let j=0;j<word[i].length;j++) {
+function unique(passwd) {
+    let count = 0;
+    let point = 0;
+    for(let i=0;i<passwd.length;i++) {
+        // console.log(passwd[i])
+        if(passwd[i]>="a" && passwd[i]<="z") {
             debugger;
-            if(word[i][j] !== " "){
-temp += word[i][j]
-            }
-            else{
-                result.push(temp);
-                arr1.push(result)
-                temp="";
-            }
+            count = 1;
+            count += point;
+           
         }
-        // console.log(word[i])
+        else if(passwd[i]>="A" && passwd[i]<="Z")
+            {
+                 debugger;
+count += 2;
+ count += point;
+ 
+        }
+         else if(passwd[i]>=1 && passwd[i]<=9){
+             debugger;
+            count += 3
+            count += point; 
+             
+        }
+        else {
+            count += 5;
+             count += point;
+                 
+        }
+    count += point;
     }
-    return arr1;
+    return count;
 }
-  let arr = string(["alice and bob love leetcode", "i think so too", "this is great thanks very much"]);
-    console.log(arr);
-
+let password = unique("aA1!")
+console.log(password);
 // console.log(arr1,arr2)
     </script>
 </body>
