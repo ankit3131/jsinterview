@@ -111,21 +111,21 @@
 
 
 //////// firststring remove ///////
-function firstring(char) {
-    let firststring = char.split("")
-    // console.log(firststring);
-for(let i=0;i<firststring.length;i++) {
-    let arr1 = firststring.splice(i , 1)
-   let strings =  firststring.join("");
-// console.log(firststring);
-    // if(firststring.slice(1 , 2))
-        // reverse.push(firststring);
-    // console.log(firststring)
-return strings;
-}
+// function firstring(char) {
+//     let firststring = char.split("")
+//     // console.log(firststring);
+// for(let i=0;i<firststring.length;i++) {
+//     let arr1 = firststring.splice(i , 1)
+//    let strings =  firststring.join("");
+// // console.log(firststring);
+//     // if(firststring.slice(1 , 2))
+//         // reverse.push(firststring);
+//     // console.log(firststring)
+// return strings;
+// }
 
-}
-let string = firstring("aankit");
-console.log(string);
+// }
+// let string = firstring("aankit");
+// console.log(string);
 
 ///////// output:- "ankit"  ///////////////////////////////////
