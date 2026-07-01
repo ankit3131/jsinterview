@@ -67,4 +67,65 @@
 
 /////////////// 5 number //////////////////////////////////////////////
 
+///// common string //////
 
+// function string(arr) {
+//     let char = arr.split("");
+//     let arr1 = [];
+//     // console.log(char);
+// for(let i=0;i<char.length;i++) {
+//     if(char[i] === char[i+1]) {
+//         continue;
+//     }
+//     else {
+//     arr1.push(char[i])
+//     }
+// }
+// return arr1;
+// }
+// let common = string("ankiit");
+// console.log(common)
+
+//////////////// ankit ///////////////////////////////////////
+
+//////// count number ///////
+
+// function number(countnumber) {
+//     let max = 1;
+//     let min = 0;
+// for(let i=0;i<countnumber.length;i++) {
+//     if(countnumber[i] === countnumber[i+1]) {
+// max++;
+//     }
+//     else if(max>min) {
+// min = max;
+// max = 0;
+//     }
+// }
+// return min;
+// }
+// let count = number([1,1,1,3,3,1,1,3]);
+// console.log(count);
+
+///////////// output:- 3 //////////////////////////////////////
+
+
+//////// firststring remove ///////
+// function firstring(char) {
+//     let firststring = char.split("")
+//     // console.log(firststring);
+// for(let i=0;i<firststring.length;i++) {
+//     let arr1 = firststring.splice(i , 1)
+//    let strings =  firststring.join("");
+// // console.log(firststring);
+//     // if(firststring.slice(1 , 2))
+//         // reverse.push(firststring);
+//     // console.log(firststring)
+// return strings;
+// }
+
+// }
+// let string = firstring("aankit");
+// console.log(string);
+
+///////// output:- "ankit"  ///////////////////////////////////
