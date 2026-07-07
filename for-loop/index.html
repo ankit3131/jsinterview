@@ -154,9 +154,7 @@
 //             }
 //             left++;
 //             right--;
-//         }
-<<<<<<< HEAD
-        
+//         }        
 //         if(isPal && tempStr.length > 1) {
 //             console.log(tempStr);
 //             if(tempStr.length > longestPalindrome.length) {
@@ -192,102 +190,116 @@
    
 // }
 
-function isomorphic(arr,string){
-    let logic = true;
-    if(arr.length !== string.length) return !logic
-    for(let i=0;i<arr.length;i++) {
-        debugger;
-    let arrindex = arr.indexOf(arr[i]);
-    let stringIndex = string.indexOf(string[i]);
-    if(arrindex !== stringIndex) {
-        return false
-console.log(arrindex , stringIndex);
-    }
-}
-return true;
-}
-let arr = "egi"
-let string = "ade"
-console.log(isomorphic(arr,string))
-=======
+// function isomorphic(arr,string){
+//     let logic = true;
+//     if(arr.length !== string.length) return !logic
+//     for(let i=0;i<arr.length;i++) {
+//         debugger;
+//     let arrindex = arr.indexOf(arr[i]);
+//     let stringIndex = string.indexOf(string[i]);
+//     if(arrindex !== stringIndex) {
+//         return false
+// console.log(arrindex , stringIndex);
+//     }
+// }
+// return true;
+// }
+// let arr = "egi"
+// let string = "ade"
+// console.log(isomorphic(arr,string))
+
         
-//         if(isPal && tempStr.length > 1) {
-//             console.log(tempStr);
-//             if(tempStr.length > longestPalindrome.length) {
-//                 longestPalindrome = tempStr;
-//             }
-//         }
-//     }
-// }
+// //         if(isPal && tempStr.length > 1) {
+// //             console.log(tempStr);
+// //             if(tempStr.length > longestPalindrome.length) {
+// //                 longestPalindrome = tempStr;
+// //             }
+// //         }
+// //     }
+// // }
 
-// console.log("Longest:", longestPalindrome);
+// // console.log("Longest:", longestPalindrome);
 
 
-// let arr = "egg";
-// let string = "ade";
+// // let arr = "egg";
+// // let string = "ade";
 
-// let arr1 = arr.split("");
-// let arr2 = string.split("");
-// let logic = true;
-// for(let i=0;i<arr1.length;i++) {
-//     debugger;
-//     for(let j=0;j<arr2.length;j++){
-//  if(arr1[i] !== arr2[j]){
-//     // console.log("logic",logic)
-//     continue;
-//  }
-//  else if(arr[i] === arr2[j]){
-//     debugger;
-//     logic = false;
-// console.log("logic", logic)
-//
-//  }
-//     }
+// // let arr1 = arr.split("");
+// // let arr2 = string.split("");
+// // let logic = true;
+// // for(let i=0;i<arr1.length;i++) {
+// //     debugger;
+// //     for(let j=0;j<arr2.length;j++){
+// //  if(arr1[i] !== arr2[j]){
+// //     // console.log("logic",logic)
+// //     continue;
+// //  }
+// //  else if(arr[i] === arr2[j]){
+// //     debugger;
+// //     logic = false;
+// // console.log("logic", logic)
+// //
+// //  }
+// //     }
    
-// }
-function unique(passwd) {
-    let count = 0;
-    let point = 0;
-    for(let i=0;i<passwd.length;i++) {
-        // console.log(passwd[i])
-        if(passwd[i]>="a" && passwd[i]<="z") {
-            debugger;
-            count = 1;
-            count += point;
+// // }
+// function unique(passwd) {
+//     let count = 0;
+//     let point = 0;
+//     for(let i=0;i<passwd.length;i++) {
+//         // console.log(passwd[i])
+//         if(passwd[i]>="a" && passwd[i]<="z") {
+//             debugger;
+//             count = 1;
+//             count += point;
            
-        }
-        else if(passwd[i]>="A" && passwd[i]<="Z")
-            {
-                 debugger;
-count += 2;
- count += point;
+//         }
+//         else if(passwd[i]>="A" && passwd[i]<="Z")
+//             {
+//                  debugger;
+// count += 2;
+//  count += point;
  
-        }
-         else if(passwd[i]>=1 && passwd[i]<=9){
-             debugger;
-            count += 3
-            count += point; 
+//         }
+//          else if(passwd[i]>=1 && passwd[i]<=9){
+//              debugger;
+//             count += 3
+//             count += point; 
              
-        }
-        else {
-            count += 5;
-             count += point;
+//         }
+//         else {
+//             count += 5;
+//              count += point;
                  
-        }
-    count += point;
-    }
-<<<<<<< HEAD
+//         }
+//     count += point;
+//     }
 
-    let arr = string(["alice and bob love leetcode", "i think so too", "this is great thanks very much"]);
-    console.log(arr);
->>>>>>> develop
-=======
-    return count;
+
+//     let arr = string(["alice and bob love leetcode", "i think so too", "this is great thanks very much"]);
+//     console.log(arr);
+
+//     return count;
+// }
+// let password = unique("aA1!")
+// console.log(password);
+function missing(arr) {
+    debugger;
+    arr.sort((a, b) => a - b);
+
+    let result = [];
+
+    for (let i = 0; i < arr.length - 1; i++) {
+        debugger;
+        for (let j = arr[i] + 1; j < arr[i + 1]; j++) {
+            result.push(j);
+        }
+    }
+
+    return result;
 }
-let password = unique("aA1!")
-console.log(password);
->>>>>>> develop
-// console.log(arr1,arr2)
+
+console.log(missing([0, 7, 2, 6]));
     </script>
 </body>
 </html> 
