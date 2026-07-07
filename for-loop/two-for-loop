@@ -1,0 +1,12 @@
+function count1(equal1 , equal2){
+     let count = 2;
+for(let i=0;i<equal1.length;i++) {
+   
+    if(equal1[i] === equal2[i]) {
+count++;
+    }
+}
+return count;
+}
+let arr1 = count1(["a" , "B"], ["w" , "A" , "B" , "a"]);
+console.log(arr1)

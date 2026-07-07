@@ -7,29 +7,30 @@
 </head>
 <body>
     <script>
-function compare(prop1,prop2) {
+function employes(objects) {
     debugger;
-    let result = {}
-    let key = Object.keys(prop1);
-
-    for(let i=0;i<key.length;i++) {
-        result[key] = prop1[key];
+    let keys = {};
+    for(let i=0;i<objects.length;i++) {
+        // if(keys[objects[i].name]) {
+        keys[i].name    
+    // }
     }
-        // let key1 = Object.keys(prop2);
+//     let keys = Object.keys(objects);
+// console.log(keys);
+// for(let i=0;i<objects.length;i++) {
+//     console.log(objects[i]);
+// }
+return keys;
+}
 
-    for(let i=0;i<key.length;i++) {
-        result[key] = prop2[key]
-    }
-    return result;
-}
-let obj1 = {
-    name : "Ankit"
-}
-let obj2 = {
-    age : 25
-}
-let obj = compare(obj1,obj2)
-console.log(obj)
+
+let employees = [{ name: "Ankit" , age:40},
+  { name: "Rahul", age: 30 },
+  { name: "Amit", age: 20 }
+]
+
+let output = employes(employees);
+console.log(output)
     </script>
 </body>
 </html>
