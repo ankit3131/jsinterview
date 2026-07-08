@@ -23,14 +23,32 @@ function employes(objects) {
 return keys;
 }
 
+function count(counts) {
+    debugger;
+    let result = {};
+    let count = 0;
+    for(let i=0;i<counts.length;i++) {
+        debugger;
+if(result[counts[i].name]) {
+    result[counts[i].name]++
+}
+else{
+    result[counts[i].name] = 1;
+}
+    }
+    return result;
+}
 
-let employees = [{ name: "Ankit" , age:40},
-  { name: "Rahul", age: 30 },
-  { name: "Amit", age: 20 }
-]
+let arr=[
+ {name:"HTML"},
+ {name:"CSS"},
+ {name:"HTML"},
+ {name:"JS"},
+ {name:"CSS"}
+];
+let counter = count(arr);
+console.log(counter);
 
-let output = employes(employees);
-console.log(output)
     </script>
 </body>
 </html>

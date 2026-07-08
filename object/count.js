@@ -1,7 +1,17 @@
 function count(counts) {
-    let arr = Object.entries(counts);
-    
-    return arr;
+    debugger;
+    let result = {};
+    let count = 0;
+    for(let i=0;i<counts.length;i++) {
+        debugger;
+if(result[counts[i].name]) {
+    result[counts[i].name]++
+}
+else{
+    result[counts[i].name] = 1;
+}
+    }
+    return result;
 }
 
 let arr=[
