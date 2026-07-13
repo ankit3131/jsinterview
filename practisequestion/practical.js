@@ -160,26 +160,87 @@
 
 
 ///output:- 2
-function count(arr1) {
-    let min = 1;
-    let max = 0;
-for(let i=0;i<arr1.length;i++) {
-    if(arr1[i] === arr1[i+1]) {
-        min++;
-    }
-    else if(min>max) {
-max = min;
-min = 0;
-    }
+// function count(arr1) {
+//     let min = 1;
+//     let max = 0;
+// for(let i=0;i<arr1.length;i++) {
+//     if(arr1[i] === arr1[i+1]) {
+//         min++;
+//     }
+//     else if(min>max) {
+// max = min;
+// min = 0;
+//     }
 
    
-    // console.log(arr1[i])
-}
+//     // console.log(arr1[i])
+// }
 
-max++;
- return max;
-}
-let arr = count([0,0,1,1,1,1,1,1,2,4,1,1,1,1,1]);
-console.log(arr);
+// max++;
+//  return max;
+// }
+// let arr = count([0,0,1,1,1,1,1,1,2,4,1,1,1,1,1]);
+// console.log(arr);
 
 ////outout:-3
+// function output(count){
+//      let value = [];
+// for(let i=0;i<count.length;i++) {
+   
+//     if(count[i] >= 30) {
+// value.push(count[i])
+//     }
+// }
+// return value;
+// }
+//     let arr = output([10, 5, 20, 10, 30, 5, 40, 20, 50]);
+//     console.log(arr);
+
+
+//////////// output:-[30, 40, 50]; ////////////////////////////////////
+
+//////output:-4
+// function duplicatee(max) {
+//     let value = [];
+// for(let i=0;i<max.length;i++) {
+//     for(let j=i+1;j<max.length;j++) {
+//         if(max[i] === max[j] && !value.includes(max[i])){
+// value.push(max[i]);
+//         }
+//     }
+// }
+// return value
+// }
+// const arr = duplicatee([4, 2, 7, 4, 2, 8, 7, 9, 4, 8]);
+// console.log(arr);
+
+////////////// output:- [ 4, 2, 7, 8 ]; ////////////////////////////////
+
+// function greater(max) {
+// let value = [];
+// for(let i=0;i<max.length;i++) {
+//     if(max[i] > max[i+1]){
+//         value.push(max[i])
+//     }
+//     console.log(max[i])
+// }
+// return value;
+// }
+// const arr = greater([5, 2, 8, 1, 9, 3, 7, 4]);
+// console.log(arr);
+
+///////////////////// output:- [ 5, 8, 9, 7 ] ////////////////////////////////
+
+// function less(min){
+// let value = [];
+// for(let i=0;i<min.length;i++) {
+//     if(min[i] > min[i+1]) {
+//         value.push(min[i])
+//     }
+// }
+// return value;
+// }
+// const arr = less([3, 8, 2, 10, 5, 7, 12, 1]);
+// console.log(arr);
+
+///////////////////// output:- [ 8, 10, 12 ] ////////////////////////////////
