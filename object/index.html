@@ -22,32 +22,27 @@ function employes(objects) {
 // }
 return keys;
 }
-
-function count(counts) {
+function arr(count) {
     debugger;
-    let result = {};
-    let count = 0;
-    for(let i=0;i<counts.length;i++) {
+    let logical = true;
+    let keys = Object.keys(count);
+    for(let i=0;i<keys.length;i++) {
         debugger;
-if(result[counts[i].name]) {
-    result[counts[i].name]++
-}
-else{
-    result[counts[i].name] = 1;
-}
+        if(keys.length > 0) {
+            logical = false;
+            return;
+        }
+        else {
+            logical = true;
+        }
+       
     }
-    return result;
+    return logical;
 }
 
-let arr=[
- {name:"HTML"},
- {name:"CSS"},
- {name:"HTML"},
- {name:"JS"},
- {name:"CSS"}
-];
-let counter = count(arr);
-console.log(counter);
+let obj = arr({a:"2",b:"3"});
+console.log(obj)
+
 
     </script>
 </body>
