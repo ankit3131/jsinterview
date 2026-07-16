@@ -7,41 +7,29 @@
 </head>
 <body>
     <script>
-function employes(objects) {
+function value(increase) {
+    let min = 0;
+    let max = [];
+for(let i=0;i<increase.length;i++) {
     debugger;
-    let keys = {};
-    for(let i=0;i<objects.length;i++) {
-        // if(keys[objects[i].name]) {
-        keys[i].name    
-    // }
+    for(let j=i+1;j<increase.length;j++) {
+        increase[i] = increase[i].x
+        increase[j] = increase[j].x
+        if(increase[i] > increase[j]) {
+            let temp = increase[i]
+            increase[i] = increase[j]
+increase[j] = temp;
+        }
     }
-//     let keys = Object.keys(objects);
-// console.log(keys);
-// for(let i=0;i<objects.length;i++) {
-//     console.log(objects[i]);
-// }
-return keys;
 }
-function arr(count) {
-    debugger;
-    let logical = true;
-    let keys = Object.keys(count);
-    for(let i=0;i<keys.length;i++) {
-        debugger;
-        if(keys.length > 0) {
-            logical = false;
-            return;
-        }
-        else {
-            logical = true;
-        }
-       
-    }
-    return logical;
+return increase;
 }
 
-let obj = arr({a:"2",b:"3"});
-console.log(obj)
+let arr = value([{"x": 0}, {"x": -1}, {"x": 1}]);
+console.log(arr);
+
+
+////[{"x": -1}, {"x": 0}, {"x": 1}]
 
 
     </script>
