@@ -7,26 +7,57 @@
 </head>
 <body>
     <script>
-function value(increase) {
-    let min = 0;
-    let max = [];
-for(let i=0;i<increase.length;i++) {
-    debugger;
-    for(let j=i+1;j<increase.length;j++) {
-        increase[i] = increase[i].x
-        increase[j] = increase[j].x
-        if(increase[i] > increase[j]) {
-            let temp = increase[i]
-            increase[i] = increase[j]
-increase[j] = temp;
-        }
-    }
-}
-return increase;
-}
+// function arr1(item) {
+//     let arr = [];
+//     for(let i=0;i<item.length;i++) {
+//         let keys = Object.values(item)    
+//         debugger;
+//         if(item[i].id === "1") {
+//           debugger;
+//             item[keys] = item[i].id;
+// arr.push(item[i])
+//         }
+//         else{
+//            item[keys] = item[i].id;
+// arr.push(item[i])  
+//         }
+//     }
+//     return arr;
+// }
 
-let arr = value([{"x": 0}, {"x": -1}, {"x": 1}]);
-console.log(arr);
+// let array = arr1([
+//   {"id":"1"},
+//   {"id":"1"},
+//   {"id":"2"}
+// ])
+// console.log(array);
+
+
+function compare(prop1,prop2) {
+    let result = {}
+    let key = Object.keys(prop1);
+
+    for(let i=0;i<key.length;i++) {
+        debugger;
+        result[key] = prop1[key];
+    }
+        let key1 = Object.keys(prop2);
+
+    for(let i=0;i<key1.length;i++) {
+        debugger;
+        result[key1] = prop2[key1]
+    }
+    return result;
+}
+let obj1 = {
+    name : "Ankit"
+}
+let obj2 = {
+    age : 25
+}
+let obj = compare(obj1,obj2)
+console.log(obj)
+
 
 
 ////[{"x": -1}, {"x": 0}, {"x": 1}]
