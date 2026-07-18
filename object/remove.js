@@ -1,16 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <script>
 function num(nums) {
     let obj = {};
     for(let i=0;i<nums.length;i++) {
-        debugger;
         let key = Object.keys(nums[i])
                 let value = Object.values(nums[i])
                 let num = Number(nums[i])
@@ -29,7 +19,3 @@ let remove = num([
 {id:1}
 ])
 console.log(remove)
-
-    </script>
-</body>
-</html>
