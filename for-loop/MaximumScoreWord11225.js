@@ -14,5 +14,5 @@ function letter(string) {
 let  arr = letter(["a","a","c","d","d","d","g","o","o"]);
 console.log(arr);
 
-let words = ["dog","cat","dad","good"];
+//////////////{ a: 2, c: 1, d: 3, g: 1, o: 2 } ///////////////////
 

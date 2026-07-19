@@ -244,3 +244,55 @@
 // console.log(arr);
 
 ///////////////////// output:- [ 8, 10, 12 ]     ////////////////////////////////
+
+// function arr(unique) {
+//     let uniques = [];
+//     for(let i=0;i<unique.length;i++) {
+//         if(!uniques.includes(unique[i])) {
+// uniques.push(unique[i])
+//         }
+//     }
+//     return uniques;
+// }
+// let str = arr(['a','n','k','k','k','i','i','t']);
+// console.log(str)
+
+////////////////output:- [antkit]
+
+// function string(str) {
+// let count = 0;
+// let string = '';
+//     for(let i=0;i<str.length;i++) 
+//     {
+//         let arr = str[i].split(' ');
+//         // console.log(arr);
+//         if(arr.length>count) {
+//             count = arr.length;
+//             string = str[i];
+//         }
+//     }
+//     return string , count;
+// }
+//  let arr = string(["alice and bob love leetcode", "i think so too", "this is great thanks very much very much"]);
+//  console.log(arr);
+ ////// this is great thanks very much ///////////////ouptput
+
+ function count(missing){
+    let count = 0;
+    let arr = [];
+for(let i=0;i<missing.length;i++) {
+    if(missing[i] === count) {
+break;
+    }
+    else {
+arr.push(missing[i]);
+    }
+}
+return arr;
+ }
+let arr = count([1,1,1,0,0,0]);
+console.log(arr)
+
+
+
+
