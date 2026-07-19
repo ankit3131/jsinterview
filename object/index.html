@@ -7,29 +7,22 @@
 </head>
 <body>
     <script>
-function num(nums) {
-    let obj = {};
-    for(let i=0;i<nums.length;i++) {
-        debugger;
-        let key = Object.keys(nums[i])
-                let value = Object.values(nums[i])
-                let num = Number(nums[i])
-if(value === num)
-{
-    debugger;
-obj[i].id = value;
-}
+function obj(arr) {
+    let arr1 = [];
+    for(let i=0;i<arr.length;i++){
+        if(arr[i] === null || arr[i] === 0 || arr[i] === false) {
+            debugger;
+            continue;
+        }
+        else {
+arr1.push(arr[i])
+        }
     }
-    return obj;
+     return arr1;
 }
-let remove = num([
+let arr = obj([null, 0, false, 1])
+console.log(arr);
 
-    {id:1},
-     {id:2},
-{id:1}
-])
-console.log(remove)
-
-    </script>
+    </script>`
 </body>
 </html>
