@@ -244,3 +244,61 @@
 // console.log(arr);
 
 ///////////////////// output:- [ 8, 10, 12 ]     ////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////////object////////////////////////////////////////////////////////////////////////////////////////
+// function keys(arr){
+//     let key = Object.keys(arr);
+//     return key;
+// // for(let i=0;i<key.length;i++) {
+// //     console.log(key[i])
+// // }
+// }
+
+// const user = keys({
+//     name: "Ankit",
+//     age:25
+// })
+// console.log(user)
+
+//////////[name,age]//////////////.//////////////////
+
+// const user = {
+//     name:"Ankit"
+// }
+
+// let Objects = {...user , age:26};
+// console.log(Objects);
+
+// let age = 26;
+// function add(arr) {
+// arr["age"] = 26;
+// return arr;
+// }
+// const user = add({
+//     name:"Ankit"
+// })
+// console.log(user);
+
+//////////////////////// { name: 'Ankit', age: 26 } /////////////////
+
+// function name(check) {
+//     let keys = Object.keys(check);
+// for(let i=0;i<keys.length;i++) {
+//     if(keys[i] !== "age"){
+//         return "age not exits"
+//     }
+// }
+// }
+// const user = name({
+//  name: "Ankit"
+// });
+// console.log(user)
+
+///////////////////// age not exits /////////////////////////////////////
+
+
+
+
+
+
