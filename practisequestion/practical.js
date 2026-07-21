@@ -245,59 +245,53 @@
 
 ///////////////////// output:- [ 8, 10, 12 ]     ////////////////////////////////
 
-
-/////////////////////////////////////////////////////////////////////////////////object////////////////////////////////////////////////////////////////////////////////////////
-// function keys(arr){
-//     let key = Object.keys(arr);
-//     return key;
-// // for(let i=0;i<key.length;i++) {
-// //     console.log(key[i])
-// // }
-// }
-
-// const user = keys({
-//     name: "Ankit",
-//     age:25
-// })
-// console.log(user)
-
-//////////[name,age]//////////////.//////////////////
-
-// const user = {
-//     name:"Ankit"
-// }
-
-// let Objects = {...user , age:26};
-// console.log(Objects);
-
-// let age = 26;
-// function add(arr) {
-// arr["age"] = 26;
-// return arr;
-// }
-// const user = add({
-//     name:"Ankit"
-// })
-// console.log(user);
-
-//////////////////////// { name: 'Ankit', age: 26 } /////////////////
-
-// function name(check) {
-//     let keys = Object.keys(check);
-// for(let i=0;i<keys.length;i++) {
-//     if(keys[i] !== "age"){
-//         return "age not exits"
+// function arr(unique) {
+//     let uniques = [];
+//     for(let i=0;i<unique.length;i++) {
+//         if(!uniques.includes(unique[i])) {
+// uniques.push(unique[i])
+//         }
 //     }
+//     return uniques;
 // }
+// let str = arr(['a','n','k','k','k','i','i','t']);
+// console.log(str)
+
+////////////////output:- [antkit]
+
+// function string(str) {
+// let count = 0;
+// let string = '';
+//     for(let i=0;i<str.length;i++) 
+//     {
+//         let arr = str[i].split(' ');
+//         // console.log(arr);
+//         if(arr.length>count) {
+//             count = arr.length;
+//             string = str[i];
+//         }
+//     }
+//     return string , count;
 // }
-// const user = name({
-//  name: "Ankit"
-// });
-// console.log(user)
+//  let arr = string(["alice and bob love leetcode", "i think so too", "this is great thanks very much very much"]);
+//  console.log(arr);
+ ////// this is great thanks very much ///////////////ouptput
 
-///////////////////// age not exits /////////////////////////////////////
-
-
+ function count(missing){
+    let count = 0;
+    let arr = [];
+for(let i=0;i<missing.length;i++) {
+    if(missing[i] === count) {
+break;
+    }
+    else {
+arr.push(missing[i]);
+    }
+}
+return arr;
+ }
+let arr = count([1,1,1,0,0,0]);
+console.log(arr)
 
 
 
