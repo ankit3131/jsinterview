@@ -3,7 +3,7 @@ let data = [];
 for(let i=0;i<object.length;i++) {
     if(object[i].age >= 25){
         data.push(object[i])
-    }
+    }v
 }
 return data;
 }
