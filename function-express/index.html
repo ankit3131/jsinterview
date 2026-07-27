@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let string = function (arr) {
+    let add = [];
+for (let i = 0; i < arr.length; i++) {
+    let word = arr[i];
+
+    for (let j = 1; j < word.length; j++) {
+        debugger;
+        let left = word.slice(0, j);
+        let right = word.slice(j);
+
+        if (arr.includes(left) && arr.includes(right)) {
+            add.push(word);
+        }
+    }
+}
+return add;
+}
+
+let words = string(["cat","dog","catdog" , "romeengine"]);
+console.log(words);
+
+    </script>
+</body>
+</html>
