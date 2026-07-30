@@ -7,26 +7,50 @@
 </head>
 <body>
     <script>
-        let string = function (arr) {
-    let add = [];
-for (let i = 0; i < arr.length; i++) {
-    let word = arr[i];
+  
 
-    for (let j = 1; j < word.length; j++) {
-        debugger;
-        let left = word.slice(0, j);
-        let right = word.slice(j);
+function longestString(str, k) {
+    let maxLength = 0;
 
-        if (arr.includes(left) && arr.includes(right)) {
-            add.push(word);
+    for (let i = 0; i < str.length; i++) {
+ debugger;
+        let countA = 0;
+        let countB = 0;
+
+        for (let j = i; j < str.length; j++) {
+            debugger;
+
+            if (str[j] === "A") {
+                countA++;
+            } else {
+                countB++;
+            }
+
+            let windowLength = j - i + 1;
+            let maxFreq = Math.max(countA, countB);
+            let replace = windowLength - maxFreq;
+
+            console.log(
+                "Window:", str.slice(i, j + 1),
+                "| A:", countA,
+                "| B:", countB,
+                "| Length:", windowLength,
+                "| Replace:", replace
+            );
+
+            if (replace <= k) {
+                maxLength = Math.max(maxLength, windowLength);
+            }
         }
     }
-}
-return add;
+
+    return maxLength;
 }
 
-let words = string(["cat","dog","catdog" , "romeengine"]);
-console.log(words);
+let str = "AABABAB";
+let k = 2;
+
+console.log("Answer =", longestString(str, k));
 
     </script>
 </body>
