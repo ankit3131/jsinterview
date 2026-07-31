@@ -9,48 +9,46 @@
     <script>
   
 
-function longestString(str, k) {
-    let maxLength = 0;
 
-    for (let i = 0; i < str.length; i++) {
- debugger;
-        let countA = 0;
-        let countB = 0;
-
-        for (let j = i; j < str.length; j++) {
-            debugger;
-
-            if (str[j] === "A") {
-                countA++;
-            } else {
-                countB++;
-            }
-
-            let windowLength = j - i + 1;
-            let maxFreq = Math.max(countA, countB);
-            let replace = windowLength - maxFreq;
-
-            console.log(
-                "Window:", str.slice(i, j + 1),
-                "| A:", countA,
-                "| B:", countB,
-                "| Length:", windowLength,
-                "| Replace:", replace
-            );
-
-            if (replace <= k) {
-                maxLength = Math.max(maxLength, windowLength);
-            }
+let ransomNote = function (a,b) {
+    let obj1 = {};
+    let obj2 = {};
+    let logical = false;
+    for(let i=0;i<a.length;i++) {
+        if(obj1[a[i]]) {
+            obj1[a[i]]++;
         }
+        else {
+            obj1[a[i]] = 1;
+        }
+        
     }
+    // console.log(obj1);
+    for(let i=0;i<b.length;i++) {
+        if(obj2[b[i]]) {
+            obj2[b[i]]++;
 
-    return maxLength;
+        }
+        else {
+            obj2[b[i]] = 1;
+        }
+       
+    }
+for(let i=0;i<a.length;i++) {
+    debugger;
+    if(obj2[a[i]] < obj1[b[i]]) {
+logical = true;
+break;
+    }
 }
 
-let str = "AABABAB";
-let k = 2;
-
-console.log("Answer =", longestString(str, k));
+return logical;
+}
+let ransomNotes = "a";
+let magazine = "ab";
+console.log(ransomNote(ransomNotes,magazine));
+// Input: ransomNote = "aa", magazine = "ab"
+// Output: false
 
     </script>
 </body>
