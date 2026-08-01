@@ -8,49 +8,36 @@
 <body>
     <script>
   
+function ransom(ransomNote, magazine) {
 
-function longestString(str, k) {
-    let maxLength = 0;
+    magazine = magazine.split("");
 
-    for (let i = 0; i < str.length; i++) {
- debugger;
-        let countA = 0;
-        let countB = 0;
+    for (let i = 0; i < ransomNote.length; i++) {
 
-        for (let j = i; j < str.length; j++) {
+        let found = false;
+
+        for (let j = 0; j < magazine.length; j++) {
+
+            if (ransomNote[i] === magazine[j]) {
+                debugger;
+                magazine[j] = "#"; // mark as used
+                found = true;
+                break;
+            }
+        }
+
+        if (!found) {
             debugger;
-
-            if (str[j] === "A") {
-                countA++;
-            } else {
-                countB++;
-            }
-
-            let windowLength = j - i + 1;
-            let maxFreq = Math.max(countA, countB);
-            let replace = windowLength - maxFreq;
-
-            console.log(
-                "Window:", str.slice(i, j + 1),
-                "| A:", countA,
-                "| B:", countB,
-                "| Length:", windowLength,
-                "| Replace:", replace
-            );
-
-            if (replace <= k) {
-                maxLength = Math.max(maxLength, windowLength);
-            }
+            return false;
         }
     }
 
-    return maxLength;
+    return true;
 }
 
-let str = "AABABAB";
-let k = 2;
-
-console.log("Answer =", longestString(str, k));
+// console.log(ransom("aa", "aab")); // true
+// console.log(ransom("aa", "ab"));  // false
+// console.log(ransom("abc", "cab")); // true
 
     </script>
 </body>
