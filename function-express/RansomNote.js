@@ -1,25 +1,40 @@
-let ransom = function (ransomNote , magazine) {
-let count = 0;
-let logical = false;
-for(let i=0;i<ransomNote.length;i++) {
-    for(let j=i;j<magazine.length;j++) {
+
+    let ransomNote = function (a,b) {
+        let obj1 = {};
+        let obj2 = {};
+        let logical = false;
+        for(let i=0;i<a.length;i++) {
+            if(obj1[a[i]]) {
+                obj1[a[i]]++;
+            }
+            else {
+                obj1[a[i]] = 1;
+            }
+            
+        }
+        // console.log(obj1);
+        for(let i=0;i<b.length;i++) {
+            if(obj2[b[i]]) {
+                obj2[b[i]]++;
+
+            }
+            else {
+                obj2[b[i]] = 1;
+            }
+        
+        }
+    for(let i=0;i<a.length;i++) {
         debugger;
-        if(ransomNote[i] === magazine[j]) {
-             debugger;
-            count++;
-            break;
+        if(obj2[a[i]] > obj1[b[i]]) {
+    logical = true;
+    break;
         }
     }
-}
-        if(count >=2) {
-logical = true;
-        }
-return logical;
-}
 
-let ransomNote = "aa";
-let magazine = "aab"
-
-console.log(ransom(ransomNote,magazine));
-
-/////////////output:- true////////////
+    return logical;
+    }
+    let ransomNotes = "aa";
+    let magazine = "ab";
+    console.log(ransomNote(ransomNotes,magazine));
+    // Input: ransomNote = "aa", magazine = "ab"
+    // Output: false
