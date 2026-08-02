@@ -8,37 +8,32 @@
 <body>
     <script>
   
-function ransom(ransomNote, magazine) {
 
-    magazine = magazine.split("");
+let schedule = function (string) {
+ string.sort((a,b) => (a[0]-b[0]));
+let add = [];
+add.push(string[0]);
+console.log("adds",add[1]);
 
-    for (let i = 0; i < ransomNote.length; i++) {
-
-        let found = false;
-
-        for (let j = 0; j < magazine.length; j++) {
-
-            if (ransomNote[i] === magazine[j]) {
-                debugger;
-                magazine[j] = "#"; // mark as used
-                found = true;
-                break;
-            }
-        }
-
-        if (!found) {
-            debugger;
-            return false;
-        }
+for(let i=1;i<string.length;i++) {
+    debugger;
+    let current = string[i];
+    let last = add[add.length - 1];
+    if(current[0] <= last[1]) {
+        
+last[1] = Math.max(last[1] , current[1]);
     }
-
-    return true;
+    else {
+        add.push(current);
+    }
 }
-
-// console.log(ransom("aa", "aab")); // true
-// console.log(ransom("aa", "ab"));  // false
-// console.log(ransom("abc", "cab")); // true
-
+return add;
+}
+let course = [
+    [2,3],
+    [1,4]
+]
+console.log(schedule(course));
     </script>
 </body>
 </html>
