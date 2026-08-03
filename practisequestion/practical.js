@@ -277,22 +277,43 @@
 //  console.log(arr);
  ////// this is great thanks very much ///////////////ouptput
 
- function count(missing){
-    let count = 0;
-    let arr = [];
-for(let i=0;i<missing.length;i++) {
-    if(missing[i] === count) {
-break;
+//  function count(missing){
+//     let count = 0;
+//     let arr = [];
+// for(let i=0;i<missing.length;i++) {
+//     if(missing[i] === count) {
+// break;
+//     }
+//     else {
+// arr.push(missing[i]);
+//     }
+// }
+// return arr;
+//  }
+// let arr = count([1,1,1,0,0,0]);
+// console.log(arr)
+
+
+
+///////////// second last updated////////
+
+let count = function (arr) {
+   
+for(let i=0;i<arr.length;i++) {
+     let add = [];
+    let temp;
+    for(let j=i;j<arr.length;j++) {
+        console.log(arr[j])
+        debugger;
+        if(arr[i] >= arr[j]) {
+           temp = arr[i];
+           arr[i] = arr[j];
+           arr[j] = temp; 
+        }
     }
-    else {
-arr.push(missing[i]);
-    }
+ add.push(arr);
 }
-return arr;
- }
-let arr = count([1,1,1,0,0,0]);
+   
+}
+let arr = count([[10, 50, 20, 80, 30]]);
 console.log(arr)
-
-
-
-
