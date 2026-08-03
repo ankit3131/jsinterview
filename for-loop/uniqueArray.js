@@ -9,7 +9,7 @@ for(let i=0;i<arr.length;i++) {
             let temp = arr[i] 
             arr[i] = arr[j] 
             arr[j] = temp
-        }
+        }  
     }
 }
 for(let i = 0;i<arr.length;i++) {

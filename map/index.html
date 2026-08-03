@@ -7,28 +7,27 @@
 </head>
 <body>
     <script>
-let arr = [1,2,2,2,3,2,3];
-let duplicate = [];
-let count = 0;
+let count = function (arr) {
+   
 for(let i=0;i<arr.length;i++) {
+     let add = [];
+    let temp;
     for(let j=0;j<arr.length;j++) {
-       
-if(arr[i] === arr[j])
-{
-  
-    count++
-    break;  
-}
-
+        console.log(arr[j])
+        debugger;
+        if(arr[i] >= arr[j]) {
+           temp = arr[i];
+           arr[j] = arr[i];
+           arr[i] = temp; 
+        }
     }
-    if(count > 1 && !duplicate.includes(arr[i])) {
-     
- duplicate.push(arr[i])
- count = 0;
-}
 
 }
-console.log(duplicate)
+    add.push(arr);
+}
+let arr = count([10, 50, 20, 80, 30]);
+console.log(arr)
+
     </script>
 </body>
 </html>  

@@ -9,44 +9,26 @@
     <script>
   
 
-
-let ransomNote = function (a,b) {
-    let obj1 = {};
-    let obj2 = {};
-    let logical = false;
-    for(let i=0;i<a.length;i++) {
-        if(obj1[a[i]]) {
-            obj1[a[i]]++;
+let count = function (arr) {
+   
+for(let i=0;i<arr.length;i++) {
+     let add = [];
+    let temp;
+    for(let j=0;j<arr.length;j++) {
+        debugger;
+        if(arr[i] >= arr[j]) {
+           temp = arr[i];
+           arr[j] = arr[i];
+           arr[i] = temp; 
         }
-        else {
-            obj1[a[i]] = 1;
-        }
-        
     }
-    // console.log(obj1);
-    for(let i=0;i<b.length;i++) {
-        if(obj2[b[i]]) {
-            obj2[b[i]]++;
-
-        }
-        else {
-            obj2[b[i]] = 1;
-        }
-       
-    }
-for(let i=0;i<a.length;i++) {
-    debugger;
-    if(obj2[a[i]] < obj1[b[i]]) {
-logical = true;
-break;
-    }
+ add.push(arr);
 }
-
-return logical;
+   
 }
-let ransomNotes = "a";
-let magazine = "ab";
-console.log(ransomNote(ransomNotes,magazine));
+let arr = count([[10, 50, 20, 80, 30]]);
+console.log(arr)
+
 // Input: ransomNote = "aa", magazine = "ab"
 // Output: false
 
