@@ -297,23 +297,47 @@
 
 ///////////// second last updated////////
 
-let count = function (arr) {
+// let count = function (arr) {
+//   let add = [];
+//   let count = 0;
+// for(let i=0;i<arr.length;i++) {
    
-for(let i=0;i<arr.length;i++) {
-     let add = [];
-    let temp;
-    for(let j=i;j<arr.length;j++) {
-        console.log(arr[j])
-        debugger;
-        if(arr[i] >= arr[j]) {
-           temp = arr[i];
-           arr[i] = arr[j];
-           arr[j] = temp; 
-        }
-    }
- add.push(arr);
-}
-   
-}
-let arr = count([[10, 50, 20, 80, 30]]);
-console.log(arr)
+//     let temp;
+//     for(let j=i;j<arr.length;j++) {
+//       //   console.log(arr[j])
+//         debugger;
+//         if(arr[i] >= arr[j]) {
+//          debugger;
+//            temp = arr[i];
+//            arr[i] = arr[j];
+//            arr[j] = temp; 
+//         }
+//     }
+ 
+// }
+//   add.push(arr); 
+// //   return add;
+
+// for(let i=0;i<arr.length-1;i++) {
+//    count = arr[i];
+// }
+// return count;
+// }
+// let arr = count([10, 50, 20, 80, 30]);
+// console.log(arr)
+
+// second last 50;
+// let arr1 = function (arr) {
+//    let duplicate = [];
+//    for(let i=0;i<arr.length;i++) {
+//       if(!duplicate.includes(arr[i])) {
+// duplicate.push(arr[i])
+//       }
+//    }
+//    return duplicate;
+// }
+// let arr = [1,2,3,2,4,1,5];
+// console.log(arr1(arr));
+// otuput:- [1,2,3,4,5];
+
+
