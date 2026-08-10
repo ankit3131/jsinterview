@@ -7,6 +7,7 @@
 </head>
 <body>
     <script>
+<<<<<<< Updated upstream
 let count = function (arr) {
   let add = [];
 for(let i=0;i<arr.length;i++) {
@@ -30,6 +31,28 @@ for(let i=0;i<arr.length;i++) {
 }
 let arr = count([10, 50, 20, 80, 30]);
 console.log(arr);
+=======
+let user = (obj)  => {
+    let obj1 = {};
+for(let i=0;i<obj.length;i++) {
+    if(!obj1[obj[i].city]) {
+        debugger;
+        obj1[obj[i].city] += obj[i];
+    }
+    else {
+        obj1[obj[i].city] = obj[i];
+    }
+}
+return obj1;
+}
+const users = [
+    { name: "Ankit", city: "Noida" },
+    { name: "Rahul", city: "Delhi" },
+    { name: "Amit", city: "Noida" },
+    { name: "Raj", city: "Delhi" }
+];
+console.log(user(users))
+>>>>>>> Stashed changes
     </script>`
 </body>
 </html>
