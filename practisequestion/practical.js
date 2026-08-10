@@ -341,3 +341,17 @@
 // otuput:- [1,2,3,4,5];
 
 
+/////////////
+let paligram = function (string) {
+    let logical = false;
+for(let i=0;i<string.length/2;i++) {
+    if(string[i] === string[string.length - 1 - i]) {
+logical = true;
+    }
+}
+return logical;
+}
+let paligrams = "madam";
+console.log(paligram(paligrams))
+
+
