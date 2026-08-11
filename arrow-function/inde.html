@@ -7,30 +7,24 @@
 </head>
 <body>
     <script>
-      let user = (data) => {
-
-let string = "fullname"
-let result = [];
-for(let i=0;i<data.length;i++) {
-    let obj1 = {};
-    debugger;
-    obj1[string] =  data[i].firstname + " " + data[i].lastname;
-    // console.log(data[i])
-    result.push(obj1);
-}
-
-return result;
-}
-
-let users = [
-    {
-        firstname : "Ankit" , lastname : "Kumar"
-    },
-    {
- firstname : "Rahul" , lastname : "Sharma"
+  let num = (nums) => {
+let count = [];
+for(let i=0;i<nums.length;i++) {
+    for(let j=i+1;j<nums.length;j++) {
+        for(let k=j+1;k<nums.length;k++) {
+            debugger;
+            if(nums[i]+nums[j]+nums[k] === 0) {
+                debugger;
+                count.push([nums[i],nums[j],nums[k]])
+            }
+        }
     }
-]
-console.log(user(users));
+}
+return count;
+}
+
+const nums = [-1, 0, 1, 2, -1, -4];
+console.log(num(nums));
     </script>
 </body>
 </html>
