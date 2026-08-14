@@ -2,7 +2,7 @@ const result = (total) =>{
 console.log(total)
 }
 const myResult = (a,b,callback) => {
-total = a+b;
+let total = a+b;
 callback(total)
 }
 myResult(10,30,result)
