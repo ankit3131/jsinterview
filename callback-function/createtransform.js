@@ -1,23 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
-    <script>
 let array = (users) => {
-    debugger;
     let key = "fullname";
 let name = {}
 name[key] = users.firstname + ' ' + users.lastname;
 return name;
 }
 let myObj = (users , callback) => {
-    debugger;
     let result = [];
     let key = 'fullname';
     for(let i=0;i<users.length;i++) {
@@ -48,8 +35,3 @@ console.log(myObj(users,array));
 // {fullname: 'Ankit kumar'},
 // {fullname:'Rahul Kumar'}
 // ]
-
-    </script>
-</body>
-
-</html>
