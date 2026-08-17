@@ -28,3 +28,5 @@ let employees = [{ name: "Ankit" , age:40},
 
 let output = employes(employees);
 console.log(output)
+
+// output:- ['Ankit','Rahul','Amit']
