@@ -1,16 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <script>
-  const Dashboard = (users) =>{
+let reactUsers = [];
+let inactiveUsers =  [];
+let cities = [];
+const Dashboard = (users) =>{
     debugger;
     if(users.skills[0] === "React") {
-console.log(users.name);
+reactUsers.push(users.name);
+    }
+    if(users.active === true) {
+inactiveUsers.push(users.name);
+    }
+    if(!cities.includes(users.city)) {
+        cities.push(users.city)
     }
     
 }
@@ -50,6 +50,6 @@ const users = [
 ];
 
 users.forEach(Dashboard);
-    </script>
-</body>
-</html>
+console.log(reactUsers);
+console.log(inactiveUsers);
+console.log(cities);
