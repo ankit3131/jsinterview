@@ -7,26 +7,26 @@
 </head>
 <body>
     <script>
-let count = function (arr) {
-   
-for(let i=0;i<arr.length;i++) {
-     let add = [];
-    let temp;
-    for(let j=0;j<arr.length;j++) {
-        console.log(arr[j])
-        debugger;
-        if(arr[i] >= arr[j]) {
-           temp = arr[i];
-           arr[j] = arr[i];
-           arr[i] = temp; 
-        }
+        let obj = {};
+        let user = (users) =>{
+                debugger;
+console.log("Ankit kumar")
+let newObj = 'Fullname'
+if(!obj[newObj]) {
+return obj[newObj] = users.firstname + '' + users.lastname;
+        } 
+        return obj;
     }
-
-}
-    add.push(arr);
-}
-let arr = count([10, 50, 20, 80, 30]);
-console.log(arr)
+      
+  
+let create = [{
+    firstname : 'Aankit',
+    lastname: 'kumar'},
+      {firstname : 'Aankit',
+    lastname: 'kumar'
+}]
+let arr = create.map(user)
+console.log(arr);
 
     </script>
 </body>
