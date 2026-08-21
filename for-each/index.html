@@ -7,49 +7,14 @@
 </head>
 <body>
     <script>
-  const Dashboard = (users) =>{
-    debugger;
-    if(users.skills[0] === "React") {
-console.log(users.name);
-    }
-    
-}
-const users = [
-    {
-        id: 1,
-        name: "Ankit",
-        age: 28,
-        city: "Noida",
-        active: true,
-        skills: ["React", "JavaScript"]
-    },
-    {
-        id: 2,
-        name: "Rahul",
-        age: 32,
-        city: "Delhi",
-        active: false,
-        skills: ["JavaScript", "Node"]
-    },
-    {
-        id: 3,
-        name: "Amit",
-        age: 25,
-        city: "Noida",
-        active: true,
-        skills: ["React", "CSS"]
-    },
-    {
-        id: 4,
-        name: "Neha",
-        age: 30,
-        city: "Delhi",
-        active: true,
-        skills: ["React", "Node"]
-    }
-];
+  const numbers = [1, 2, 3];
 
-users.forEach(Dashboard);
+const result = numbers.map((num) => {
+    debugger;
+    console.log(num * 2);
+});
+
+console.log(result);
     </script>
 </body>
 </html>

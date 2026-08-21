@@ -1,13 +1,13 @@
-// let arr = [1,2,3]
-// let arr1 = arr.map((item => item+10))
-// console.log(arr1)
+const numbers = [1,2,3,4,5];
+let add = numbers.map((arr) => {
+return arr+2;
+})
+console.log(add);
 
-//output :- [11,12,13]
+// otuput value:- [ 3, 4, 5, 6, 7 ]
 
-// let arr = [1,2,3]
-// let arr1 = arr.map((item => {
-//  return item+10
-// }))
-// console.log(arr1)
+const numbers = [1,2,3,4,5];
+let add = numbers.map((arr) => arr+2);
+console.log(add);
 
-//output :- [11,12,13]
+// otuput value:- [ 3, 4, 5, 6, 7 ]
