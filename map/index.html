@@ -7,27 +7,21 @@
 </head>
 <body>
     <script>
-        let obj = {};
-        let user = (users) =>{
-                debugger;
-console.log("Ankit kumar")
-let newObj = 'Fullname'
-if(!obj[newObj]) {
-return obj[newObj] = users.firstname + '' + users.lastname;
-        } 
-        return obj;
-    }
-      
-  
-let create = [{
-    firstname : 'Aankit',
-    lastname: 'kumar'},
-      {firstname : 'Aankit',
-    lastname: 'kumar'
-}]
-let arr = create.map(user)
-console.log(arr);
+const users = [
+       { firstName: "Ankit", lastName: "Kumar", age: 24 },
+    { firstName: "Rahul", lastName: "Sharma", age: 30 }
+];
 
+let array = users.map((user) => {
+    debugger;
+let obj = {};
+let string = "Fullname"
+obj[string] = user.firstName + " " + user.lastName
+user.age
+return obj;
+})
+
+console.log(array);
     </script>
 </body>
 </html>  
