@@ -7,27 +7,21 @@
 </head>
 <body>
     <script>
-let count = function (arr) {
-   
-for(let i=0;i<arr.length;i++) {
-     let add = [];
-    let temp;
-    for(let j=0;j<arr.length;j++) {
-        console.log(arr[j])
-        debugger;
-        if(arr[i] >= arr[j]) {
-           temp = arr[i];
-           arr[j] = arr[i];
-           arr[i] = temp; 
-        }
-    }
+const users = [
+       { firstName: "Ankit", lastName: "Kumar", age: 24 },
+    { firstName: "Rahul", lastName: "Sharma", age: 30 }
+];
 
-}
-    add.push(arr);
-}
-let arr = count([10, 50, 20, 80, 30]);
-console.log(arr)
+let array = users.map((user) => {
+    debugger;
+let obj = {};
+let string = "Fullname"
+obj[string] = user.firstName + " " + user.lastName
+user.age
+return obj;
+})
 
+console.log(array);
     </script>
 </body>
 </html>  
