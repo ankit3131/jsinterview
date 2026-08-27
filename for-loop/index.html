@@ -283,23 +283,34 @@
 // }
 // let password = unique("aA1!")
 // console.log(password);
-function missing(arr) {
+// function missing(arr) {
+//     debugger;
+//     arr.sort((a, b) => a - b);
+
+//     let result = [];
+
+//     for (let i = 0; i < arr.length - 1; i++) {
+//         debugger;
+//         for (let j = arr[i] + 1; j < arr[i + 1]; j++) {
+//             result.push(j);
+//         }
+//     }
+
+//     return result;
+// }
+
+// console.log(missing([0, 7, 2, 6]));
+let uniquevalue = function(arr) {
+    let unique = [];
+for(let i=0;i<arr.length;i++) {
     debugger;
-    arr.sort((a, b) => a - b);
-
-    let result = [];
-
-    for (let i = 0; i < arr.length - 1; i++) {
-        debugger;
-        for (let j = arr[i] + 1; j < arr[i + 1]; j++) {
-            result.push(j);
-        }
-    }
-
-    return result;
+  if(arr[i] !== arr[i+1] && arr[i] !== arr[i-1]) {
+unique.push(arr[i])
+  }
 }
-
-console.log(missing([0, 7, 2, 6]));
+return unique;
+}
+console.log(uniquevalue([1,2,2,3,4,4,5]));
     </script>
 </body>
 </html> 

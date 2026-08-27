@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+  
+
+<<<<<<< HEAD
+let count = function (arr) {
+   
+for(let i=0;i<arr.length;i++) {
+     let add = [];
+    let temp;
+    for(let j=0;j<arr.length;j++) {
+        debugger;
+        if(arr[i] >= arr[j]) {
+           temp = arr[i];
+           arr[j] = arr[i];
+           arr[i] = temp; 
+        }
+=======
+let schedule = function (string) {
+ string.sort((a,b) => (a[0]-b[0]));
+let add = [];
+add.push(string[0]);
+console.log("adds",add[1]);
+
+for(let i=1;i<string.length;i++) {
+    debugger;
+    let current = string[i];
+    let last = add[add.length - 1];
+    if(current[0] <= last[1]) {
+        
+last[1] = Math.max(last[1] , current[1]);
+    }
+    else {
+        add.push(current);
+>>>>>>> d395708c0cd2a0bfdafd5040b49fe3dc810c2fb2
+    }
+ add.push(arr);
+}
+<<<<<<< HEAD
+   
+}
+let arr = count([[10, 50, 20, 80, 30]]);
+console.log(arr)
+
+// Input: ransomNote = "aa", magazine = "ab"
+// Output: false
+
+=======
+return add;
+}
+let course = [
+    [2,3],
+    [1,4]
+]
+console.log(schedule(course));
+>>>>>>> d395708c0cd2a0bfdafd5040b49fe3dc810c2fb2
+    </script>
+</body>
+</html>

@@ -7,28 +7,21 @@
 </head>
 <body>
     <script>
-let arr = [1,2,2,2,3,2,3];
-let duplicate = [];
-let count = 0;
-for(let i=0;i<arr.length;i++) {
-    for(let j=0;j<arr.length;j++) {
-       
-if(arr[i] === arr[j])
-{
-  
-    count++
-    break;  
-}
+const users = [
+       { firstName: "Ankit", lastName: "Kumar", age: 24 },
+    { firstName: "Rahul", lastName: "Sharma", age: 30 }
+];
 
-    }
-    if(count > 1 && !duplicate.includes(arr[i])) {
-     
- duplicate.push(arr[i])
- count = 0;
-}
+let array = users.map((user) => {
+    debugger;
+let obj = {};
+let string = "Fullname"
+obj[string] = user.firstName + " " + user.lastName
+user.age
+return obj;
+})
 
-}
-console.log(duplicate)
+console.log(array);
     </script>
 </body>
 </html>  

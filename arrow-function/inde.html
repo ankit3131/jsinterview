@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+ let nums = (num) => {
+        debugger;
+        let sum = [];
+    let count = num.length +1;
+    for(let i=0;i<count;i++) {
+        debugger;
+        // console.log(i);
+        for(let j=0;j<num.length;j++) {
+            if(i === num[j]) {
+sum.push(num[j])
+            }
+        }
+    }
+    return sum;
+}
+const num = [3, 4, -1, 1];
+console.log(nums(num));
+
+    </script>
+</body>
+</html>
