@@ -47,3 +47,9 @@ total: user.amounts
    }
 ))
 console.log(arr);
+// output:-
+// [
+//     {
+//          orderId:103,total: 2500
+//     }
+// ]
