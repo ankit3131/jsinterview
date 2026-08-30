@@ -5,7 +5,7 @@
 const myMap = (user ,callback) => {
     let result = [];
     for(let i=0;i<user.length;i++) {
-        result.push(callback(user[i]))
+        result.push(callback(user[i]));
     }
 return result;
 }

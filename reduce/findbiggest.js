@@ -9,7 +9,9 @@
 // }, numbers[0])
 // console.log(add);
 ////////////// output:-80
+
 function result(results) {
+  debugger;
   let count = 0;
   if(count > results) {
 count = results;
@@ -19,7 +21,7 @@ count = results;
   }
   console.log(count)
 }
-function total(callback , arr){
+function total(callback , arr) {
 for(let i=0;i<=arr.length;i++) {
     debugger;
     callback(arr[i]);
