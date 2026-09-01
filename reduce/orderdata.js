@@ -1,54 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <script>
-        // const numbers = [10,30,20,80];
-// const add = numbers.reduce((prev , num) => {
-// if(num > prev) {
-//     return num;
-// }
-// else {
-//     return prev;
-// }
-// }, numbers[0])
-// console.log(add);
-////////////// output:-80
-
-//  let count = 0;
-// function result(results) {
-//     debugger;
-//     if(results === undefined) {
-//         return;
-//     }
-//   debugger;
- 
-//   if(count < results) {
-// count = results;
-//   }
-//   else {
-// count = count;
-//   }
-//   return count;
-// }
-// function total(callback , arr) {
-// for(let i=0;i<=arr.length;i++) {
-//     debugger;
-//     callback(arr[i]);
-//     // if(count <= callback(result[i])) {
-//     //     count = result[i];
-//     // }
-//     // else {
-//     //     count = result[i];
-//     // }
-// }
-// }
-// const numbers = [10,30,20,80];
-// console.log(total(result , numbers))
 const orders = [
     {
         id: 101,
@@ -102,6 +51,4 @@ for(let i=0;i<result.length;i++) {
 return count;
 }
 console.log(user(orders));
-</script>
-</body>
-</html>
+//output:- 82000
