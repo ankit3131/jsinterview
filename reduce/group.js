@@ -19,6 +19,8 @@ else {
 return accum;
 } , {})
 console.log(obj);
+
+// output:-{ Noida: [ 'Ankit', 'Amit' ], Delhi: [ 'Rahul', 'Raj' ] }
 // step:-2
 
 // function user(users) {
@@ -45,3 +47,5 @@ console.log(obj);
 // ];
 
 // console.log(user(data))
+
+// output:-{ Noida: [ 'Ankit', 'Amit' ], Delhi: [ 'Rahul', 'Raj' ] }
