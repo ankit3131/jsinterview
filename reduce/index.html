@@ -49,6 +49,8 @@
 // }
 // const numbers = [10,30,20,80];
 // console.log(total(result , numbers))
+// step:-1
+
 const orders = [
     {
         id: 101,
@@ -76,32 +78,25 @@ const orders = [
         ]
     }
 ];
-
-function user(user) {
-    let obj = [];
-    let result = [];
-    let count = 0;
-for(let i=0;i<user.length;i++) {
-    debugger;
-    if(user[i].status === "completed") {
-        // obj[user[i].items] = [];
-obj.push(user[i].items);
+let users = orders.reduce((accum , value) => {
+    // let count = 0;
+    if(value.status === "completed") {
+        debugger;
+// accum.push(value.items);
+ return accum.concat(value.items);
+ count = value.price * value.quantity;
     }
-   
-}
-for(let i=0;i<obj.length;i++) {
-for(let j=0;j<obj[i].length;j++) {
-result.push(obj[i][j])
-}
-}
-for(let i=0;i<result.length;i++) {
-    debugger;
-    count += result[i].price * result[i].quantity;
-    
-}
-return count;
-}
-console.log(user(orders));
+   return accum;
+// return count;
+},[])
+
+let count = 0;
+let sum = users.map((user) => {
+    count += user.price * price.quantity;
+console.log(count)
+})
+// console.log(sum);
+// output:- 82000
 </script>
 </body>
 </html>

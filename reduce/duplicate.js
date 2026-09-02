@@ -8,6 +8,7 @@ accum.push(user);
    return accum
 },[]);
 console.log(name);
+
 // otuput:-[10, 20, 30, 40]
 
 // step:-2
