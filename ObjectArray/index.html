@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function users(value) {
+            debugger;
+    for(let i=0;i<value.length;i++) {
+        if(value[i].salary > 50000 && value[i].department === 'IT') {
+            debugger;
+        console.log(value[i]);
+    }
+    else {
+        console.log('not data')
+    }
+}
+}
+const employees = [
+    {name:'Ankit', department:'IT' , salary:4000},
+    {name:'Ankit', department:'HR' , salary:5000},
+    {name:'Ankit', department:'IT' , salary:70000},
+    {name:'Ankit', department:'IT' , salary:30000},
+]
+
+console.log(users(employees))
+    </script>
+</body>
+</html>
