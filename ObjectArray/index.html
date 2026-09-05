@@ -7,26 +7,49 @@
 </head>
 <body>
     <script>
-        function users(value) {
-            debugger;
-    for(let i=0;i<value.length;i++) {
-        if(value[i].salary > 50000 && value[i].department === 'IT') {
-            debugger;
-        console.log(value[i]);
+        const orders = [
+    {
+        id:101,
+        customer: 'Ankit',
+        items: [
+            {name:'Laptop',price: 50000},
+            {name: 'Mouse' , price:1000}
+        ]
+    },
+    {
+        id:102,
+        customer:'Rahul',
+        items: [
+            {name: 'Mobile',price:20000}
+        ]
     }
-    else {
-        console.log('not data')
-    }
-}
-}
-const employees = [
-    {name:'Ankit', department:'IT' , salary:4000},
-    {name:'Ankit', department:'HR' , salary:5000},
-    {name:'Ankit', department:'IT' , salary:70000},
-    {name:'Ankit', department:'IT' , salary:30000},
 ]
+    function user(value) {
+ let store = [];
+    for(let i=0;i<value.length;i++) {
+         let obj = {};
+        debugger;
+         let price = 0;
 
-console.log(users(employees))
+   for(let j=0;j<=value[i].items.length+1;j++) {
+    debugger;
+    const item = value[i].items[j]
+    if(item === undefined) { 
+        break;
+    }
+    price += value[i].items[j].price;
+   }
+   obj['id'] = value[i].id,
+   obj['customer'] = value[i].customer,
+   obj['items'] = price;
+           store.push(obj);
+      
+}
+  return store;
+ 
+}
+
+console.log(user(orders));
     </script>
 </body>
 </html>
