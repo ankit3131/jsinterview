@@ -30,13 +30,28 @@ let user = students.map(users => {
     let average = users.subject.reduce((accum , value) => {
         if(value.marks >= accum) {
             debugger;
-accum = accum + value.marks;
-console.log(value);
+accum = value.marks;
+// console.log(value);
         }
+        return accum;
     },0)
+    return {
+        name:users.name,
+        marks:average
+    }
+
     // console.log(average);
 })
-// console.log(user);
+// let final = user.map((users) => {
+    let last = user.reduce((accum , users) => {
+if(users.smarks > accum) {
+        accum = users.marks;
+         return users;
+}
+return accum;
+    },0)
+   
+console.log(last);
 // output:-
 //  {
 //             name:"Javascript",
