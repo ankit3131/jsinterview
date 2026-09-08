@@ -7,7 +7,24 @@
 </head>
 <body>
     <script>
-        const students = [
+     const orders = [
+    {
+        id:101,
+        customer: 'Ankit',
+        items: [
+            {name:'Laptop',price:50000},
+            {name: 'Mouse',price:1000}
+        ]
+    },
+    {
+        id:102,
+        customer:'Rahul',
+        items: [
+            {name: 'Mobile',price:20000}
+        ]
+    }
+]
+const students = [
 {
     name:"Ankit",
     subject:[
@@ -30,29 +47,32 @@
         },
         {
             name:"React",
-            marks:70
+            marks:95
         }
     ]
 }
 ]
-   let user = students.map(users => { 
-            let count = 0;
+let result = [];
+let count = 0;
+let user = students.map(users => {
     let average = users.subject.reduce((accum , value) => {
-        if(value.marks >= accum) {
-            debugger;
-accum = value.marks;
-// count = accum;
-// arr.push(value);
-// return arr;
+        if(value.marks >= accum.marks) {
+            return value;
+        }
+        return accum;
+    }, users.subject[0]);
+
+    result.push(average);
+});
+//  console.log(result);
+let final = result.filter((user1) => {
+    debugger;
+if(user1.marks >= count) {
+count = user1.marks;
 }
-return accum;
-    },0)
-       return  {
-        name: users.name,
-        maximum: average
-       }
+return count;
 })
-console.log(user);
+console.log(count);
     </script>
 </body>
 </html>

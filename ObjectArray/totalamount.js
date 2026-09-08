@@ -4,8 +4,8 @@ const orders = [
         id:101,
         customer: 'Ankit',
         items: [
-            {name:'Laptop',price: 50000},
-            {name: 'Mouse' , price:1000}
+            {name:'Laptop',price:50000},
+            {name: 'Mouse',price:1000}
         ]
     },
     {
