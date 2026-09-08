@@ -21,37 +21,35 @@ const students = [
         },
         {
             name:"React",
-            marks:70
+            marks:95
         }
     ]
 }
 ]
+let result = [];
+let count = 0;
 let user = students.map(users => {
     let average = users.subject.reduce((accum , value) => {
-        if(value.marks >= accum) {
+        if(value.marks >= accum.marks) {
             debugger;
-accum = value.marks;
-// console.log(value);
+            return value;
         }
         return accum;
-    },0)
-    return {
-        name:users.name,
-        marks:average
-    }
+    }, users.subject[0]);
 
-    // console.log(average);
-})
-// let final = user.map((users) => {
-    let last = user.reduce((accum , users) => {
-if(users.smarks > accum) {
-        accum = users.marks;
-         return users;
+    result.push(average);
+});
+let arr1 = [];
+//  console.log(result);
+let final = result.reduce((accum , user) => {
+    debugger;
+if(user.marks >= accum.marks) {
+return user;
 }
 return accum;
-    },0)
-   
-console.log(last);
+},result[0])
+arr1.push(final);
+console.log(arr1);
 // output:-
 //  {
 //             name:"Javascript",

@@ -342,16 +342,37 @@
 
 
 /////////////
-let paligram = function (string) {
-    let logical = false;
-for(let i=0;i<string.length/2;i++) {
-    if(string[i] === string[string.length - 1 - i]) {
-logical = true;
+// let paligram = function (string) {
+//     let logical = false;
+// for(let i=0;i<string.length/2;i++) {
+//     if(string[i] === string[string.length - 1 - i]) {
+// logical = true;
+//     }
+// }
+// return logical;
+// }
+// let paligrams = "madam";
+// console.log(paligram(paligrams))
+
+
+// index value show
+
+let arr1 = [1,0,0,3,4];
+let total = [];
+let arr = [];
+let arr2 = [];
+for(let i=0;i<arr1.length;i++) {
+    if(arr1[i] !== 0) {
+        arr.push(arr1[i]);
     }
+    else {
+arr2.push(arr1[i]);
+    }
+
 }
-return logical;
-}
-let paligrams = "madam";
-console.log(paligram(paligrams))
+  total = [...arr , ...arr2]
+console.log(total);
+
+
 
 
