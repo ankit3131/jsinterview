@@ -354,24 +354,40 @@
 // let paligrams = "madam";
 // console.log(paligram(paligrams))
 
+/////////////
 
-// index value show
+// let arr1 = [1,0,0,3,4];
+// let total = [];
+// let arr = [];
+// let arr2 = [];
+// for(let i=0;i<arr1.length;i++) {
+//     if(arr1[i] !== 0) {
+//         arr.push(arr1[i]);
+//     }
+//     else {
+// arr2.push(arr1[i]);
+//     }
 
-let arr1 = [1,0,0,3,4];
-let total = [];
+// }
+//   total = [...arr , ...arr2]
+// console.log(total);
+
+// output:-[0,0,1,3,4];
+
+/////////////////////
+let arr1 = [1,2,2,3];
+let arr2 = [2,1];
 let arr = [];
-let arr2 = [];
 for(let i=0;i<arr1.length;i++) {
-    if(arr1[i] !== 0) {
-        arr.push(arr1[i]);
-    }
-    else {
-arr2.push(arr1[i]);
-    }
-
+    for(let j=0;j<arr2.length;j++) {
+        debugger;
+if(arr1[i] === arr2[j]) {
+arr.push(arr1[i])
+break;
 }
-  total = [...arr , ...arr2]
-console.log(total);
+    }
+}
+console.log(arr);
 
 
 
