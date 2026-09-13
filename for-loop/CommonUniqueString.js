@@ -18,15 +18,15 @@ console.log(arr)
 //["c"] will be refercne output on chatgpt
 
 
-let arr = "aabbcdef";
-let unique = [];
+// let arr = "aabbcdef";
+// let unique = [];
 
-for (let i = 0; i < arr.length; i++) {
-    debugger;
-  if (arr.indexOf(arr[i]) === arr.lastIndexOf(arr[i])) {
-    unique.push(arr[i]);
-    break;
-  }
-}
+// for (let i = 0; i < arr.length; i++) {
+//     debugger;
+//   if (arr.indexOf(arr[i]) === arr.lastIndexOf(arr[i])) {
+//     unique.push(arr[i]);
+//     break;
+//   }
+// }
 
 // ["c"] will be refercne on chatgpt

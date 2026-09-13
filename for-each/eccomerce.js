@@ -34,3 +34,10 @@ console.log("Outofstock" , Outofstock);
 console.log("totalValue" , totalValue);
 console.log(findmostexpensive);
 console.log("count" , count);
+
+// output:-
+// id: 1,
+//   name: 'Laptop',
+//   category: 'Electronics',
+//   price: 60000,
+//   stock: 5

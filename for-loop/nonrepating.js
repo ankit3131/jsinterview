@@ -9,18 +9,18 @@
 //     if(arr[i] === arr[i+1]){
 // break;
 //     }
-//     else{
+//     // else{
 
-//     }
-//     // for(let j=i+1;j<arr.length;j++){
-//     //     if(arr[i] === arr[j]){
-//     //         break;
-//     //     }
-//     //     if(arr[i] !== arr[j]) {
-//     //         console.log(arr[i])
-//     //         break;
-//     //     }
 //     // }
+//     for(let j=i+1;j<arr.length;j++){
+//         if(arr[i] === arr[j]){
+//             break;
+//         }
+//         if(arr[i] !== arr[j]) {
+//             console.log(arr[i])
+//             break;
+//         }
+//     }
 // }
 
 let arr = [0,0,1,1,1,2,4]

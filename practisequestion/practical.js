@@ -375,20 +375,64 @@
 // output:-[0,0,1,3,4];
 
 /////////////////////
-let arr1 = [1,2,2,3];
-let arr2 = [2,1];
-let arr = [];
-for(let i=0;i<arr1.length;i++) {
-    for(let j=0;j<arr2.length;j++) {
-        debugger;
-if(arr1[i] === arr2[j]) {
-arr.push(arr1[i])
-break;
-}
+// let arr1 = [1,2,2,3];
+// let arr2 = [2,1];
+// let arr = [];
+// for(let i=0;i<arr1.length;i++) {
+//     for(let j=0;j<arr2.length;j++) {
+//         debugger;
+// if(arr1[i] === arr2[j]) {
+// arr.push(arr1[i])
+// break;
+// }
+//     }
+// }
+// console.log(arr);
+
+// output:- [1,2,2]
+
+// const str = "aabcdeb";
+// let arr = [];
+
+// let split = str.split("");
+// for(let i=0;i<split.length;i++){
+//     if(!arr.includes(split[i])) {
+// arr.push(split[i]);
+//     }
+// }
+// let string = arr.toString("");
+// console.log(string);
+// console.log(split);
+
+// output:-"abcde"
+
+
+// let arr =  [1,2]
+// let arr1 = [3,4]
+// let total = [];
+// for(let i=0;i<arr.length;i++) {
+//     for(let j=0;j<arr1.length;j++) {
+//         if(i === j) {
+//         let add = arr[i] + arr1[j]
+// total.push(add);
+//         }
+//     }
+// }
+// console.log(total);
+// output:- [4,6]
+
+let keyName = ["daniel","daniel","daniel","luis","luis","luis","luis"];
+let keyTime = ["10:00","10:40","11:00","09:00","11:00","13:00","15:00"];
+let str = keyName.map((value) => {
+    let obj = {};
+    if(!obj[value]) {
+        obj[value] = [];
     }
-}
-console.log(arr);
+    return obj
+})
+console.log(str);
 
-
-
-
+  //  output:- {
+//   daniel: [ '10:00', '10:40', '11:00' ],
+//   luis: [ '09:00', '11:00', '13:00', '15:00' ]
+// }
