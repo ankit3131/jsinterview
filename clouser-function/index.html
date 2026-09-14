@@ -7,16 +7,18 @@
 </head>
 <body>
      <script>
-        function outer() {
-    debugger;
+     function outer() {
     let count = 0;
+
     function inner() {
-        debugger;
-        console.log(count)
-    }
-    inner();
+        count++;
+        console.log(count);
+    };
+    return inner;
 }
-outer();
+
+let counter = outer();
+counter();
      </script>
 </body>
 </html>
