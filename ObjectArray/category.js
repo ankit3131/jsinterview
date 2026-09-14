@@ -4,15 +4,33 @@ const products = [
     { name: "Shirt", category: "clothing" },
     { name: "Jeans", category: "clothing" }
 ];
-let obj = {};
-for(let i=0;i<products.length;i++) {
-    // obj = [];
-    if(!obj[products[i].category]) {
-        obj[products[i].category] = [];
-    }
-     obj[products[i].category].push(products[i].name)
+// step:1
+let product = products.reduce((accum , use) => {
+    
+if(!accum[use.category]) {
+    accum[use.category] = [];
 }
-console.log(obj);
+accum[use.category].push(use.name);
+return accum;
+},{})
+console.log(product);
+
+// output:-
+// {
+//     electronics: ["Laptop", "Mobile"],
+//     clothing: ["Shirt", "Jeans"]
+// }
+
+// step:-2
+// let obj = {};
+// for(let i=0;i<products.length;i++) {
+//     // obj = [];
+//     if(!obj[products[i].category]) {
+//         obj[products[i].category] = [];
+//     }
+//      obj[products[i].category].push(products[i].name)
+// }
+// console.log(obj);
 
 // output:-
 // {

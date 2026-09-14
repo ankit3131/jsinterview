@@ -16,20 +16,20 @@ const orders = [
         ]
     }
 ]
-// let user = orders.map((value) => {
-// let valuese = value.items.reduce((accum , value) =>  {
-//     debugger;
-//     return accum + value.price
-//     },0)
-//     return {
-//         id:value.id,
-//         customer:value.customer,
-//         items:valuese
-//     }
+let user = orders.map((value) => {
+let valuese = value.items.reduce((accum , value) =>  {
+    debugger;
+    return accum + value.price
+    },0)
+    return {
+        id:value.id,
+        customer:value.customer,
+        items:valuese
+    }
    
-// } 
+} 
 
-// )
+)
 
 // output:-   {
     //     id:101,
