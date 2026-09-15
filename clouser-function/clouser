@@ -1,1 +1,4 @@
-clouser is a outerfunction varaible to inside innerfunction same scope.
+// clouser is a outerfunction varaible to inside innerfunction same scope.
+
+// return inner;  :-  (give back the function)
+// return inner() :-  (run and execute result)

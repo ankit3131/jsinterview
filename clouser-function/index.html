@@ -7,18 +7,44 @@
 </head>
 <body>
      <script>
-     function outer() {
-    let count = 0;
+//      function outer() {
+//     let count = 0;
 
-    function inner() {
-        count++;
-        console.log(count);
-    };
+//     function inner() {
+//         count++;
+//         console.log(count);
+//     };
+//     return inner;
+// }
+
+// outer();
+
+function outer() {
+    let count = 0;
+function inner() {
+    debugger;
+console.log(count);
+}
     return inner;
 }
+outer();
+let x = outer();
+x();
 
-let counter = outer();
-counter();
+// step:-1
+
+    // function outer() {
+    //     let count = 0;
+    // function inner() {
+    // console.log(count);
+    // // return count;
+    // }
+    //     return inner();
+    // }
+    // outer();
+    // let x = outer();
+    // x();
+
      </script>
 </body>
 </html>
