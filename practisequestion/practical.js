@@ -436,3 +436,24 @@ console.log(str);
 //   daniel: [ '10:00', '10:40', '11:00' ],
 //   luis: [ '09:00', '11:00', '13:00', '15:00' ]
 // }
+function second(value) {
+    let min = null;
+    let max = null;
+    for(let i=0;i<value.length;i++) {
+        if(value[i] > min) {
+            min = value[i];
+            break;
+        }
+       else {
+max = value[i]
+       }
+    }
+}
+const arr = [5,10,20,30];
+let arr = second(arr);
+let min = -0;
+let max = -0;
+
+
+// output:- 20
+
