@@ -19,32 +19,49 @@
 
 // outer();
 
-function outer() {
-    let count = 0;
-function inner() {
-    debugger;
-console.log(count);
-}
-    return inner;
-}
-outer();
-let x = outer();
-x();
+// step:-1
+// function counter() {
+//     let count = 0;
+
+//     return function () {
+//         debugger;
+//         count++;
+//         return count;
+//     };
+// }
+
+// const count1 = counter();
+// const count2 = counter();
+
+// console.log(count1());
+// console.log(count1());
+// console.log(count2());
+// console.log(count2());
+
 
 // step:-1
 
-    // function outer() {
-    //     let count = 0;
-    // function inner() {
-    // console.log(count);
-    // // return count;
-    // }
-    //     return inner();
-    // }
-    // outer();
-    // let x = outer();
-    // x();
 
+    function bankAccount(balance) {
+        debugger;
+    return {
+        deposit(amount) {
+            debugger;
+            balance += amount;
+        },
+
+        getBalance() {
+            debugger;
+            return balance;
+        }
+    };
+}
+
+const account = bankAccount(1000);
+
+account.deposit(500);
+
+console.log(account.getBalance());
      </script>
 </body>
 </html>
