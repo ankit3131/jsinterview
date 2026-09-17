@@ -15,3 +15,5 @@ for(let i=0;i<str.length;i++) {
 const input = ["eat","tea","tan","ate","nat","bat"];
 let result = groupAnagrams(input);
 console.log(result);
+
+// output:-[ [ 'eat', 'tea', 'ate' ], [ 'tan', 'nat' ], [ 'bat' ] ]

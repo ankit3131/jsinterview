@@ -421,18 +421,54 @@
 // console.log(total);
 // output:- [4,6]
 
-let keyName = ["daniel","daniel","daniel","luis","luis","luis","luis"];
-let keyTime = ["10:00","10:40","11:00","09:00","11:00","13:00","15:00"];
-let str = keyName.map((value) => {
-    let obj = {};
-    if(!obj[value]) {
-        obj[value] = [];
-    }
-    return obj
-})
-console.log(str);
+// let keyName = ["daniel","daniel","daniel","luis","luis","luis","luis"];
+// let keyTime = ["10:00","10:40","11:00","09:00","11:00","13:00","15:00"];
+// let str = keyName.map((value) => {
+//     let obj = {};
+//     if(!obj[value]) {
+//         obj[value] = [];
+//     }
+//     return obj
+// })
+// console.log(str);
 
   //  output:- {
 //   daniel: [ '10:00', '10:40', '11:00' ],
 //   luis: [ '09:00', '11:00', '13:00', '15:00' ]
 // }
+
+////////////////////////
+// function arr(user) {
+//     for(let i=0;i<user.length;i++) {
+//         for(let j=0;j<user.length;j++) {
+//             if(user[i] < user[j]) {
+//                 let temp = user[i]
+//                 user[i] = user[j]
+//                 user[j] = temp;
+//             }
+
+//         }
+//     }
+//     return user;
+// }
+// let arr1 = [4,2,10,1];
+// let result = arr(arr1);
+// console.log(result);
+// output:- [1,2,4,10]
+
+function names(name){
+  let data = [];
+  for(let i=0;i<name.length;i++) {
+  for(let j=i;j<name.length;j++){
+    debugger;
+if(name[i].includes(name[j])) {
+data.push(name[i])
+}
+  }
+  }
+return data;
+}
+const input = ["eat","tea","tan","ate","nat","bat"];
+let user = names(input)
+console.log(user);
+// output:- [ [ 'eat', 'tea', 'ate' ], [ 'tan', 'nat' ], [ 'bat' ] ]
