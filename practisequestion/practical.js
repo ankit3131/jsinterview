@@ -456,19 +456,43 @@
 // console.log(result);
 // output:- [1,2,4,10]
 
-function names(name){
-  let data = [];
-  for(let i=0;i<name.length;i++) {
-  for(let j=i;j<name.length;j++){
-    debugger;
-if(name[i].includes(name[j])) {
-data.push(name[i])
-}
-  }
-  }
-return data;
-}
-const input = ["eat","tea","tan","ate","nat","bat"];
-let user = names(input)
-console.log(user);
+// function names(name){
+//   let data = [];
+//   for(let i=0;i<name.length;i++) {
+//   for(let j=i;j<name.length;j++){
+//     debugger;
+// if(name[i].includes(name[j])) {
+// data.push(name[i])
+// }
+//   }
+//   }
+// return data;
+// }
+// const input = ["eat","tea","tan","ate","nat","bat"];
+// let user = names(input)
+// console.log(user);
 // output:- [ [ 'eat', 'tea', 'ate' ], [ 'tan', 'nat' ], [ 'bat' ] ]
+
+
+// for loop 
+function users(value) {
+  let min = null;
+  let max = null;
+
+  for(let i=0;i<value.length;i++) {
+    debugger;
+    if(min < value[i]) {
+      min = value[i]
+    }
+    if (min >  max) {
+      debugger;
+      max = value[i+1];
+    }
+  }
+return min;
+}
+let user = [5,10,20,25];
+let names = users(user);
+console.log(names);
+// [5,10,20,25]
+//output:- [20]
