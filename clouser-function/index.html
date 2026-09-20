@@ -41,27 +41,23 @@
 
 // step:-1
 
-
-    function bankAccount(balance) {
+function outer() {
+    debugger;
+    let count = 0;
+    return function() {
         debugger;
-    return {
-        deposit(amount) {
-            debugger;
-            balance += amount;
-        },
-
-        getBalance() {
-            debugger;
-            return balance;
-        }
-    };
+        count++;
+        console.log(count)
+    }
 }
+let a = outer();
+let b = outer();
+a();
+a();
+b();
+a();
+b();
 
-const account = bankAccount(1000);
-
-account.deposit(500);
-
-console.log(account.getBalance());
      </script>
 </body>
 </html>
