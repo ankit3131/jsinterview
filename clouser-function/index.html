@@ -40,24 +40,21 @@
 
 
 // step:-1
-
-function outer() {
+let timer;
+const search = (value) => {
     debugger;
-    let count = 0;
-    return function() {
-        debugger;
-        count++;
-        console.log(count)
-    }
-}
-let a = outer();
-let b = outer();
-a();
-a();
-b();
-a();
-b();
+    clearTimeout(timer);
 
+    timer = setTimeout(() => {
+        debugger;
+        console.log("API Call:", value);
+    }, 500);
+};
+search("A")
+search("An")
+search("Ank")
+search("Anki")
+search("Ankit")
      </script>
 </body>
 </html>
