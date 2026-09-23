@@ -12,10 +12,10 @@ const search = (value) => {
     debugger;
     clearTimeout(timer);
 
-    timer = setTimeout(() => {
+    timer = setTimeout((value) => {
         debugger;
         console.log("API Call:", value);
-    }, 500);
+    }, 500 , value);
 };
 search("A")
 search("An")
