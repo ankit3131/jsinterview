@@ -7,21 +7,21 @@
 </head>
 <body>
     <script>
-        let timer;
-const search = (value) => {
+     let timer;
+const searchUser = (value) => {
     debugger;
     clearTimeout(timer);
-
-    timer = setTimeout((value) => {
+    console.log(timer);
+    setTimeout(() => {
         debugger;
-        console.log("API Call:", value);
-    }, 500 , value);
-};
-search("A")
-search("An")
-search("Ank")
-search("Anki")
-search("Ankit")
+console.log("value", value)
+    }, 500)
+}
+ searchUser("A");
+ searchUser("AN");
+ searchUser("ANK");
+ searchUser("ANKI");
+ searchUser("ANKIT");
     </script>
 </body>
 </html>

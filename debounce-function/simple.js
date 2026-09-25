@@ -14,22 +14,23 @@
 // API Call: ANKI
 // API Call: ANKIT
 
-const debounce = (callback , delay) => {
-    let timer;
+// const debounce = (callback , delay) => {
+//     let timer;
 
-    return function (value) {
-        clearTimeout(timer);
-        timer = setTimeout(() => {
-callback(value);
-        } , delay)
-    }
-}
+//     return function (value) {
+//         clearTimeout(timer);
+//         timer = setTimeout(() => {
+// callback(value);
+//         } , delay)
+//     }
+// }
 let timer;
 const searchUser = (value) => {
     clearTimeout(timer);
+    console.log(timer);
     setTimeout(() => {
 console.log("value", value)
-    }, 0)
+    }, 500)
 }
  searchUser("A");
  searchUser("AN");
