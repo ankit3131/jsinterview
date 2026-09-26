@@ -26,6 +26,7 @@
 // }
 let timer;
 const searchUser = (value) => {
+    debugger;
     clearTimeout(timer);
     console.log(timer);
     setTimeout(() => {
