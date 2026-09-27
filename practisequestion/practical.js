@@ -475,24 +475,38 @@
 
 
 // for loop 
-function users(value) {
-  let min = null;
-  let max = null;
+// function users(value) {
+//   let min = null;
+//   let max = null;
 
-  for(let i=0;i<value.length;i++) {
-    debugger;
-    if(min < value[i]) {
-      min = value[i]
-    }
-    if (min >  max) {
-      debugger;
-      max = value[i+1];
-    }
-  }
-return min;
-}
-let user = [5,10,20,25];
-let names = users(user);
-console.log(names);
+//   for(let i=0;i<value.length;i++) {
+//     debugger;
+//     if(min < value[i]) {
+//       min = value[i]
+//     }
+//     if (min >  max) {
+//       debugger;
+//       max = value[i+1];
+//     }
+//   }
+// return min;
+// }
+// let user = [5,10,20,25];
+// let names = users(user);
+// console.log(names);
 // [5,10,20,25]
 //output:- [20]
+
+let find = "I love javascript programming";
+let count = 0;
+let string;
+let split = find.split(" ");
+for(let i=0;i<split.length;i++) {
+  debugger;
+  if(split[i].length > count) {
+      count = split[i].length;
+    string = split[i];
+  }
+}
+console.log(string);
+// output:-programming;
