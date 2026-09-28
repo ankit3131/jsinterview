@@ -1,12 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <script>
 
 function debounce(callback , delay) {
     debugger;
@@ -20,7 +11,6 @@ timer = setTimeout( () => {
 }
 
 let search = debounce((value) => {
-    debugger;
     console.log("value",value)
 },500)
 
@@ -29,6 +19,5 @@ search("An");
 search("Ank");
 search("Anki");
 search("Ankit");
-    </script>
-</body>
-</html>
+
+// output:-Ankit
