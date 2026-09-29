@@ -40,21 +40,20 @@
 
 
 // step:-1
-let timer;
-const search = (value) => {
+function outer() {
     debugger;
-    clearTimeout(timer);
-
-    timer = setTimeout(() => {
+    let count = 0;
+    function inner() {
         debugger;
-        console.log("API Call:", value);
-    }, 500);
-};
-search("A")
-search("An")
-search("Ank")
-search("Anki")
-search("Ankit")
+        console.log(count);
+        count++
+    }
+    return inner;
+}
+// let reuslt = 
+outer();
+outer();
+outer();
      </script>
 </body>
 </html>

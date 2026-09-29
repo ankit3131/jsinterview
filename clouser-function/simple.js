@@ -1,16 +1,16 @@
 // step:-1
-function outer() {
-    let count = 0;
-    function inner() {
-        console.log(count)
-        count++;
-    }
-   return inner;
-}
-let result = outer();
-result();
-result();
-result();
+// function outer() {
+//     let count = 0;
+//     function inner() {
+//         console.log(count)
+//         count++;
+//     }
+//    return inner;
+// }
+// let result = outer();
+// result();
+// result();
+// result();
 
 // output:-
 // 0
@@ -19,18 +19,19 @@ result();
 // when are use inner; count value not refresh and store value;
 
 // step:-2
-// function outer() {
-//     let count = 0;
-//     function inner() {
-//         console.log(count);
-//         count++
-//     }
-//     return inner();
-// }
-// // let reuslt = 
-// outer();
-// outer();
-// outer();
+function outer() {
+    debugger;
+    let count = 0;
+    function inner() {
+        console.log(count);
+        count++
+    }
+    return inner();
+}
+// let reuslt = 
+outer();
+outer();
+outer();
 
 // output:-
 // 0
