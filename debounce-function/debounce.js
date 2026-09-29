@@ -2,15 +2,17 @@
 function debounce(callback , delay) {
     debugger;
 let timer;
-return function(value) {
+function name(value) {
 clearTimeout(timer);
 timer = setTimeout( () => {
     callback(value)
 },delay);
 }
+return name;
 }
 
 let search = debounce((value) => {
+    debugger;
     console.log("value",value)
 },500)
 
