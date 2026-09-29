@@ -7,7 +7,32 @@
 </head>
 <body>
     <script>
+function users(value) {
+  let min = null;
+  let max = null;
 
+  for(let i=0;i<value.length;i++) {
+    debugger;
+    if(min < value[i]) {
+      min = value[i]
+      max = value[i+1];
+    }
+    if (min <= max) {
+      debugger;
+      min = value[i];
+    }
+  }
+return min;
+}
+let user = [5,10,20,25];
+let names = users(user);
+console.log(names);
+    // if(arr[i]>secondmax && arr[i]<max) {
+
+    //     secondmax = arr[i]
+    // }
+   
+// console.log(max);
 // const arr = [5, 10, 20];
 // let infiniex = -Infinity;;
 // let secondvalue =  -Infinity;;

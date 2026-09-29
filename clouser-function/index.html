@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <script>
+//      function outer() {
+//     let count = 0;
+
+//     function inner() {
+//         count++;
+//         console.log(count);
+//     };
+//     return inner;
+// }
+
+// outer();
+
+// step:-1
+// function counter() {
+//     let count = 0;
+
+//     return function () {
+//         debugger;
+//         count++;
+//         return count;
+//     };
+// }
+
+// const count1 = counter();
+// const count2 = counter();
+
+// console.log(count1());
+// console.log(count1());
+// console.log(count2());
+// console.log(count2());
+
+
+// step:-1
+let timer;
+const search = (value) => {
+    debugger;
+    clearTimeout(timer);
+
+    timer = setTimeout(() => {
+        debugger;
+        console.log("API Call:", value);
+    }, 500);
+};
+search("A")
+search("An")
+search("Ank")
+search("Anki")
+search("Ankit")
+     </script>
+</body>
+</html>

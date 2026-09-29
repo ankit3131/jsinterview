@@ -342,16 +342,171 @@
 
 
 /////////////
-let paligram = function (string) {
-    let logical = false;
-for(let i=0;i<string.length/2;i++) {
-    if(string[i] === string[string.length - 1 - i]) {
-logical = true;
-    }
-}
-return logical;
-}
-let paligrams = "madam";
-console.log(paligram(paligrams))
+// let paligram = function (string) {
+//     let logical = false;
+// for(let i=0;i<string.length/2;i++) {
+//     if(string[i] === string[string.length - 1 - i]) {
+// logical = true;
+//     }
+// }
+// return logical;
+// }
+// let paligrams = "madam";
+// console.log(paligram(paligrams))
+
+/////////////
+
+// let arr1 = [1,0,0,3,4];
+// let total = [];
+// let arr = [];
+// let arr2 = [];
+// for(let i=0;i<arr1.length;i++) {
+//     if(arr1[i] !== 0) {
+//         arr.push(arr1[i]);
+//     }
+//     else {
+// arr2.push(arr1[i]);
+//     }
+
+// }
+//   total = [...arr , ...arr2]
+// console.log(total);
+
+// output:-[0,0,1,3,4];
+
+/////////////////////
+// let arr1 = [1,2,2,3];
+// let arr2 = [2,1];
+// let arr = [];
+// for(let i=0;i<arr1.length;i++) {
+//     for(let j=0;j<arr2.length;j++) {
+//         debugger;
+// if(arr1[i] === arr2[j]) {
+// arr.push(arr1[i])
+// break;
+// }
+//     }
+// }
+// console.log(arr);
+
+// output:- [1,2,2]
+
+// const str = "aabcdeb";
+// let arr = [];
+
+// let split = str.split("");
+// for(let i=0;i<split.length;i++){
+//     if(!arr.includes(split[i])) {
+// arr.push(split[i]);
+//     }
+// }
+// let string = arr.toString("");
+// console.log(string);
+// console.log(split);
+
+// output:-"abcde"
 
 
+// let arr =  [1,2]
+// let arr1 = [3,4]
+// let total = [];
+// for(let i=0;i<arr.length;i++) {
+//     for(let j=0;j<arr1.length;j++) {
+//         if(i === j) {
+//         let add = arr[i] + arr1[j]
+// total.push(add);
+//         }
+//     }
+// }
+// console.log(total);
+// output:- [4,6]
+
+// let keyName = ["daniel","daniel","daniel","luis","luis","luis","luis"];
+// let keyTime = ["10:00","10:40","11:00","09:00","11:00","13:00","15:00"];
+// let str = keyName.map((value) => {
+//     let obj = {};
+//     if(!obj[value]) {
+//         obj[value] = [];
+//     }
+//     return obj
+// })
+// console.log(str);
+
+  //  output:- {
+//   daniel: [ '10:00', '10:40', '11:00' ],
+//   luis: [ '09:00', '11:00', '13:00', '15:00' ]
+// }
+
+////////////////////////
+// function arr(user) {
+//     for(let i=0;i<user.length;i++) {
+//         for(let j=0;j<user.length;j++) {
+//             if(user[i] < user[j]) {
+//                 let temp = user[i]
+//                 user[i] = user[j]
+//                 user[j] = temp;
+//             }
+
+//         }
+//     }
+//     return user;
+// }
+// let arr1 = [4,2,10,1];
+// let result = arr(arr1);
+// console.log(result);
+// output:- [1,2,4,10]
+
+// function names(name){
+//   let data = [];
+//   for(let i=0;i<name.length;i++) {
+//   for(let j=i;j<name.length;j++){
+//     debugger;
+// if(name[i].includes(name[j])) {
+// data.push(name[i])
+// }
+//   }
+//   }
+// return data;
+// }
+// const input = ["eat","tea","tan","ate","nat","bat"];
+// let user = names(input)
+// console.log(user);
+// output:- [ [ 'eat', 'tea', 'ate' ], [ 'tan', 'nat' ], [ 'bat' ] ]
+
+
+// for loop 
+// function users(value) {
+//   let min = null;
+//   let max = null;
+
+//   for(let i=0;i<value.length;i++) {
+//     debugger;
+//     if(min < value[i]) {
+//       min = value[i]
+//     }
+//     if (min >  max) {
+//       debugger;
+//       max = value[i+1];
+//     }
+//   }
+// return min;
+// }
+// let user = [5,10,20,25];
+// let names = users(user);
+// console.log(names);
+// [5,10,20,25]
+//output:- [20]
+
+let find = "I love javascript programming";
+let count = 0;
+let string;
+let split = find.split(" ");
+for(let i=0;i<split.length;i++) {
+  debugger;
+  if(split[i].length > count) {
+      count = split[i].length;
+    string = split[i];
+  }
+}
+console.log(string);
+// output:-programming;

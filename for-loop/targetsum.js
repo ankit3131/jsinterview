@@ -1,10 +1,15 @@
-let sum = [2,2,2,2,2]
-let total = 0;
+let sum = [2,6,4,5]
+let count = 0;
 let target = 8;
-for(let i=0;i<sum.length-1;i++) {
-total = total + sum[i];
-console.log(sum[i]);
-    if(total === target) {
-
+let arr = [];
+for(let i=0;i<sum.length;i++) {
+    for(let j=i+1;j<sum.length;j++) {
+        count = sum[i] + sum[j];
+        if(count === target) {
+            arr.push(sum[i] , sum[j]);
+        }
     }
 }
+console.log(arr);
+
+// arr[2,6]

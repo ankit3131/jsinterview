@@ -6,3 +6,5 @@ function total(callback){
 callback(3,4);
 }
 total(result);
+
+// output:- 7 ; 
