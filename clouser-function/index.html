@@ -40,20 +40,36 @@
 
 
 // step:-1
+// function outer() {
+//     debugger;
+//     let count = 0;
+//     function inner() {
+//         console.log(count)
+//         count++;
+//     }
+//    return inner;
+// }
+// let result = outer();
+// result();
+// result();
+
+
 function outer() {
     debugger;
     let count = 0;
-    function inner() {
+    return function() {
         debugger;
-        console.log(count);
-        count++
+        count++;
+        console.log(count)
     }
-    return inner;
 }
-// let reuslt = 
-outer();
-outer();
-outer();
+let a = outer();
+let b = outer();
+a();
+a();
+b();
+a();
+b();
      </script>
 </body>
 </html>

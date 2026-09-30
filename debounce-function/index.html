@@ -7,29 +7,23 @@
 </head>
 <body>
     <script>
-function debounce(callback , delay) {
-    debugger;
+
+
 let timer;
-function name(value) {
-clearTimeout(timer);
-timer = setTimeout( () => {
-    callback(value)
-},delay);
-}
-return name;
-}
-
-let search = debounce((value) => {
+const searchUser = (value) => {
     debugger;
-    console.log("value",value)
-},500)
-
-search("A");
-search("An");
-search("Ank");
-search("Anki");
-search("Ankit");
-
+    clearTimeout(timer);
+    console.log(timer);
+      timer =   setTimeout(() => {
+        debugger;
+console.log("value", value)
+    }, 500)
+}
+ searchUser("A");
+ searchUser("AN");
+ searchUser("ANK");
+ searchUser("ANKI");
+ searchUser("ANKIT");
     </script>
 </body>
 </html>

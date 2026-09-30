@@ -2,3 +2,24 @@
 
 // return inner;  :-  (give back the function)
 // return inner() :-  (run and execute result)
+
+
+//      function outer() {
+//     let count = 0;
+
+//     function inner() {
+//         count++;
+//         console.log(count);
+//     };
+//     return inner;
+// }
+
+// outer();
+
+
+// first step work outer(); line 17
+// second step inside function in outer(); line 7
+// third same scope work inner function and return inner;
+// after return inner; line 14 same as well as outer(); this is clouser function
+
+// finally output:-1;
