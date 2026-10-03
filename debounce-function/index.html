@@ -8,22 +8,27 @@
 <body>
     <script>
 
-
-let timer;
-const searchUser = (value) => {
+function debounce(callback , time) {
     debugger;
-    clearTimeout(timer);
-    console.log(timer);
-      timer =   setTimeout(() => {
-        debugger;
-console.log("value", value)
-    }, 500)
+    let timer;
+clearTimeout(timer);
+function name(value){
+    debugger;
+timer = setTimeout(() => {
+callback(value);
+}, time)
 }
- searchUser("A");
- searchUser("AN");
- searchUser("ANK");
- searchUser("ANKI");
- searchUser("ANKIT");
+
+return name;
+}
+
+let searchUser = debounce((value) => {
+    debugger;
+console.log(value)
+}, 10000)
+
+searchUser("A");
+
     </script>
 </body>
 </html>

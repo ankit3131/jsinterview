@@ -53,23 +53,19 @@
 // result();
 // result();
 
+    function outer() {
+        debugger;
+    let count = 2;
 
-function outer() {
-    debugger;
-    let count = 0;
-    return function() {
+    function inner() {
         debugger;
         count++;
-        console.log(count)
-    }
+        console.log(count);
+    };
+    inner();
 }
-let a = outer();
-let b = outer();
-a();
-a();
-b();
-a();
-b();
+//  let result = outer();
+outer()
      </script>
 </body>
 </html>
