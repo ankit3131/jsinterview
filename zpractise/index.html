@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      
+function main(pass) {
+  debugger;
+console.log(pass);
+}
+
+function result(callback , arr) {
+  debugger;
+  let arr1 = [];
+for(let i=0;i<arr.length;i++) {
+  if(!arr1.includes(arr[i])) {
+    arr1.push(arr[i])
+  }
+}
+ callback(arr1)
+}
+
+let num = [10,20,10,30];
+result(main , num);
+    </script>
+</body>
+</html>
