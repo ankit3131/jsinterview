@@ -7,18 +7,43 @@
 </head>
 <body>
     <script>
-        let find = "I love javascript en programming";
-let count = 0;
-let string;
-let split = find.split(" ");
-for(let i=0;i<split.length;i++) {
+   
+// function debounce(callback , delay){
+//   debugger;
+// let timer;
+// clearTimeout(timer);
+// function value(name) {
+// timer = setTimeout(() => {
+// callback(name);
+// },delay)
+// }
+// return value;
+// }
+// let main = debounce((value) => {
+//   debugger;
+// console.log(value);
+// },1000);
+// main("Ankit");
+
+const numbers = [10,20,10,10,40];
+let result = [];
+function child(){
   debugger;
-  if(split[i].length > count) {
-    count = split[i].length;
-    string = split[i];
-  }
+console.log(result);
 }
-console.log(string);
+function main(callback, value){
+  debugger;
+  for(let i=0;i<value.length;i++) {
+  if(!result.includes(value[i])) {
+    result.push(value[i]);
+    // console.log(reult);
+  }
+  }
+  return result;
+}
+main(child , numbers);
+
+//  output:- 10, 20, 40
     </script>
 </body>
 </html>

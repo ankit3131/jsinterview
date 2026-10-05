@@ -1,5 +1,5 @@
 const greet = () => {
-    console.log("Hello")
+    console.log("Hello print")
 }
 const result = (callback) => {
 callback();

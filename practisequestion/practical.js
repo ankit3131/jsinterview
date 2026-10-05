@@ -497,16 +497,58 @@
 // [5,10,20,25]
 //output:- [20]
 
-let find = "I love javascript programming";
-let count = 0;
-let string;
-let split = find.split(" ");
-for(let i=0;i<split.length;i++) {
-  debugger;
-  if(split[i].length > count) {
-      count = split[i].length;
-    string = split[i];
-  }
-}
-console.log(string);
+// let find = "I love javascript programming";
+// let count = 0;
+// let string;
+// let split = find.split(" ");
+// for(let i=0;i<split.length;i++) {
+//   debugger;
+//   if(split[i].length > count) {
+//       count = split[i].length;
+//     string = split[i];
+//   }
+// }
+// console.log(string);
 // output:-programming;
+
+// function main(value) {
+// return value;
+// }
+// let child = (callback , value) => {
+//   callback(value);
+// }
+// main(child, console.log("Ankit"))
+// ///work but not callback senrio "Ankit"
+
+// function main(callback , value) {
+//   debugger;
+// callback(value);
+// }
+
+// let child = (value) => {
+//   debugger;
+// console.log(value);
+// }
+
+// main(child,"Ankit")
+// output:- callback use:-Ankit
+
+// function debounce(callback , value){
+//   debugger;
+// let timer;
+// clearTimeout(timer);
+// function value() {
+// timer = setTimeout(() => {
+// console.log(callback);
+// },value)
+// }
+// return value;
+// }
+// let main = debounce(
+// setTimeout((value) => {
+//   console.log(value);
+// }
+// ,1000));
+// main("Ankit");
+
+// Ankit
