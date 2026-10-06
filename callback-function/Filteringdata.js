@@ -8,7 +8,6 @@ function adult(){
     }
    
 }
- console.log("ID card elegiabale");
 }
 function isLogical(users , callback){
 

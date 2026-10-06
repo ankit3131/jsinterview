@@ -511,22 +511,51 @@
 // console.log(string);
 // output:-programming;
 
-function main(pass) {
+// function main(pass) {
+//   debugger;
+// console.log(pass);
+// }
+
+// function result(callback , arr) {
+//   debugger;
+//   let arr1 = [];
+// for(let i=0;i<arr.length;i++) {
+//   if(!arr1.includes(arr[i])) {
+//     arr1.push(arr[i])
+//   }
+// }
+//  callback(arr1)
+// }
+
+// let num = [10,20,10,30];
+// result(main , num);
+//output:- [10,20,30]
+
+
+const users = [
+    {
+        Name:"Ankit",Age:18
+
+    },
+    {
+        Name:"Rahul" , Age:30
+    },
+    {
+        Name:"Arun",Age:20
+    }
+]
+function main(results) {
   debugger;
-console.log(pass);
+console.log(results);
 }
 
-function result(callback , arr) {
+function result(callback , value) {
   debugger;
-  let arr1 = [];
-for(let i=0;i<arr.length;i++) {
-  if(!arr1.includes(arr[i])) {
-    arr1.push(arr[i])
-  }
+let filter = value.filter((users) => {
+  if(users.Age <= 18) {
+    callback(users);
 }
- callback(arr1)
+})
 }
-
-let num = [10,20,10,30];
-result(main , num);
-// [10,20,30]
+result(main , users)
+// output:- { Name: 'Ankit', Age: 18 }
