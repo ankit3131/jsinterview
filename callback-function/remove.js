@@ -15,6 +15,6 @@ let array = (users , callback) =>  {
      return result;
 }
 const numbers = [10,20,10,10,40];
-console.log(array(numbers , rem ove))
+console.log(array(numbers , remove))
 
 // remove value use output :- [ 10, 20, 40 ] 

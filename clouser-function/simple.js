@@ -3,6 +3,7 @@ function outer() {
     debugger;
     let count = 0;
     function inner() {
+        debugger;
         console.log(count)
         count++;
     }

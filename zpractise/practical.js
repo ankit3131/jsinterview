@@ -532,30 +532,46 @@
 //output:- [10,20,30]
 
 
-const users = [
-    {
-        Name:"Ankit",Age:18
+// const users = [
+//     {
+//         Name:"Ankit",Age:18
 
-    },
-    {
-        Name:"Rahul" , Age:30
-    },
-    {
-        Name:"Arun",Age:20
-    }
-]
-function main(results) {
-  debugger;
-console.log(results);
-}
+//     },
+//     {
+//         Name:"Rahul" , Age:30
+//     },
+//     {
+//         Name:"Arun",Age:20
+//     }
+// ]
+// function main(results) {
+//   debugger;
+// console.log(results);
+// }
 
-function result(callback , value) {
-  debugger;
-let filter = value.filter((users) => {
-  if(users.Age <= 18) {
-    callback(users);
-}
-})
-}
-result(main , users)
+// function result(callback , value) {
+//   debugger;
+// let filter = value.filter((users) => {
+//   if(users.Age <= 18) {
+//     callback(users);
+// }
+// })
+// }
+// result(main , users)
 // output:- { Name: 'Ankit', Age: 18 }
+
+function outer() {
+  debugger;
+let count = 0;
+function inner() {
+   debugger;
+  count++;
+  console.log(count);
+}
+return inner;
+}
+
+let result = outer();
+result();
+result();
+result();

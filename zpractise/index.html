@@ -7,17 +7,22 @@
 </head>
 <body>
     <script>
-      
-const result = (total) =>{
-    debugger;
-console.log(total)
+  
+function outer() {
+  debugger;
+let count = 0;
+function inner() {
+   debugger;
+  count++;
+  console.log(count);
 }
-const myResult = (a,b,callback) => {
-     debugger;
-let total = a+b;
-callback(total)
+return inner;
 }
-myResult(10,30,result)
+
+let result = outer();
+result();
+result();
+result();
     </script>
 </body>
 </html>
