@@ -67,19 +67,19 @@
 // 3
 // 2
 
-// function outer() {
-//     let x = 10;
+function outer() {
+    let x = 10;
 
-//     return function() {
-//         x += 5;
-//         console.log(x)
-//     }
+    return function() {
+        x += 5;
+        console.log(x)
+    }
 
-// }
-// let fn = outer();
-// fn();
-// fn();
-// fn();
+}
+let fn = outer();
+fn();
+fn();
+fn();
 
 // output:-
 

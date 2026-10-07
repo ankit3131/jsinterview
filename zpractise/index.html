@@ -8,33 +8,16 @@
 <body>
     <script>
       
-const users = [
-    {
-        Name:"Ankit",Age:18
-
-    },
-    {
-        Name:"Rahul" , Age:17 
-    },
-    {
-        Name:"Arun",Age:20
-    }
-]
-function main(results) {
-  debugger;
-console.log(results);
+const result = (total) =>{
+    debugger;
+console.log(total)
 }
-
-function result(callback , value) {
-  debugger;
-let filter = value.filter((users) => {
-  debugger;
-  if(users.Age <= 18) {
-    callback(users);
+const myResult = (a,b,callback) => {
+     debugger;
+let total = a+b;
+callback(total)
 }
-})
-}
-result(main , users)
+myResult(10,30,result)
     </script>
 </body>
 </html>
