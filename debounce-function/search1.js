@@ -10,15 +10,21 @@
 // search("APPLE");
 
 function main(data) {
+    debugger;
 console.log(data);
 }
 function search(callback , value) {
-    setTimeout(callback(value) , 1000)
+    debugger;
+    setTimeout(() => {
+        callback(value)
+     }
+      , 1000)
 }
 search(main , "A");
 search(main, "APP");
 search(main, "APPL");
 search(main, "APPLE");
+
 
 // 
 
