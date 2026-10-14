@@ -33,3 +33,9 @@ search(main, "APPLE");
 // console.log(names);
 // }
 // setTimeout(main,4000)
+
+function result(value) {
+    console.log("Hello");
+}
+
+setTimeout(result(value) , 1000)

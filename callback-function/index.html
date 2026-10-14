@@ -9,45 +9,36 @@
 
 <body>
     <script>
-let array = (users) => {
+function debounce(callback , delay) {
     debugger;
-    let key = "fullname";
-let name = {}
-name[key] = users.firstname + ' ' + users.lastname;
+let timer;
+function name(value) {
+clearTimeout(timer);
+timer = setTimeout( () => {
+    callback(value)
+},delay);
+}
 return name;
 }
-let myObj = (users , callback) => {
+
+let search = debounce((value) => {
     debugger;
-    let result = [];
-    let key = 'fullname';
-    for(let i=0;i<users.length;i++) {
-        let names = callback(users[i]);
-        result.push(names);
-//         let name = {};
-//         if(!name[key]) {
-// name[key] =  users[i].firstname +' ' + users[i].lastname;
-// result.push(name);
-        // }
-    // } 
-   
-}
- return result;
-}
-const users = [
-    {
-        firstname : 'Ankit',
-        lastname : 'Kumar'
-    },
-    {
-        firstname: 'Anjul',
-        lastname : 'Rani'
-    }
-]
-console.log(myObj(users,array));
-//output:-[ 
-// {fullname: 'Ankit kumar'},
-// {fullname:'Rahul Kumar'}
-// ]
+    console.log("value",value)
+},500)
+
+search("A");
+search("An");
+search("Ank");
+search("Anki");
+search("Ankit");
+
+// const myFunction = (a,b,callback) => {
+// callback(a+b);
+// }
+
+// myFunction(10,20,result => {
+// console.log(result)
+// })
 
     </script>
 </body>

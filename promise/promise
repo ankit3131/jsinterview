@@ -1,1 +1,4 @@
-promise is object we are 
+promise is a special object which is three state work pending , fulfile , reject.
+
+there method use then then() , catch() , finally()
+
