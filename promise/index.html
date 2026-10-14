@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const myPromise = new Promise((result , reject) => {
+    debugger;
+    let logic = true;
+
+    if(logic) {
+        debugger;
+result("Sucess result")
+    }
+    else {
+        reject("Error not worked")
+    }
+})
+myPromise.then((results) => console.log(results))
+.catch((faileds) => console.log(faileds))
+.finally((finals) => console.log("finishedd"));
+    </script>
+</body>
+</html>

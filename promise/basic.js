@@ -1,7 +1,9 @@
 const myPromise = new Promise((result , reject) => {
+    debugger;
     let logic = true;
 
     if(logic) {
+        debugger;
 result("Sucess result")
     }
     else {
