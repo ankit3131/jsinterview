@@ -14,7 +14,7 @@ if(condition) {
 resolve("Login sucessfully")
 }
 else {
-    reject("login faield")
+    reject("login faild")
 }
 })
     logic.then(result => console.log(result))

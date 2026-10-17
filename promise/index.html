@@ -7,21 +7,10 @@
 </head>
 <body>
     <script>
-        const myPromise = new Promise((result , reject) => {
+      const myPromise = new Promise((result , reject) => {
     debugger;
-    let logic = true;
-
-    if(logic) {
-        debugger;
-result("Sucess result")
-    }
-    else {
-        reject("Error not worked")
-    }
-})
-myPromise.then((results) => console.log(results))
-.catch((faileds) => console.log(faileds))
-.finally((finals) => console.log("finishedd"));
+setTimeout(() => result("result sucess") , 3000)})
+myPromise.then((result) => console.log(result));
     </script>
 </body>
 </html>
