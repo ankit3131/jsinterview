@@ -23,3 +23,7 @@ const myPromise = new Promise((result , reject) =>
 myPromise.then((result) => console.log(result))
 .catch((reject) => console.log(reject))
 .finally(console.log("success"));
+
+// otuput:-
+// success
+// reject some issued

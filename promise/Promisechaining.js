@@ -12,3 +12,5 @@ myPromise.then((result)=> {
 .then((sub) => {
     console.log(sub - 5)
 })   
+
+// output:- 20
