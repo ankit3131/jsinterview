@@ -576,6 +576,7 @@
 // result();
 // result();
 
+<<<<<<< Updated upstream
 // count:-1
 // count:-2
 // count:-3
@@ -594,3 +595,32 @@ result();
 result();
 result();
 // output:-3
+=======
+// output:-
+// 1
+// 2
+// 3
+
+// function sum(add) {
+//    debugger;
+// console.log(add);
+// }
+// function calculate(a , b , callback) {
+//   debugger;
+// let sum = a+b;
+// callback(sum);
+// }
+// calculate(10 , 20 , sum)
+// output:- sum is: 30
+
+
+let sum = (add) => {
+console.log(add);
+}
+let calculate = (a, b, callback) => {
+let sum = a+b;
+callback(sum);
+}
+calculate(10 , 20 , sum)
+// output:- sum is: 30
+>>>>>>> Stashed changes
