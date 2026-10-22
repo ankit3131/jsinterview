@@ -26,5 +26,5 @@ throw new Error(`Request timed outaaa , ${response.status}`)
 ),2000)
 
 
-// fully response api fetch data settimeout
+// output Request timed outaaa , Handle errors gracefully
 
