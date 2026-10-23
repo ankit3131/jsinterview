@@ -576,6 +576,24 @@
 // result();
 // result();
 
+// count:-1
+// count:-2
+// count:-3
+
+function outer() {
+  let count = 0;
+  function inner() {
+count++;
+if(count === 3) {
+console.log(count)
+}}
+  return inner;
+}
+let result = outer();
+result();
+result();
+result();
+// output:-3
 // output:-
 // 1
 // 2
