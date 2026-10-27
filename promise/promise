@@ -3,6 +3,6 @@ promise is a special object which is three state work pending , fulfile , reject
 there method use then then() , catch() , finally()
 
 Promise is special object inside use static method and instance method. static means directly promise such as then() , catch() , finally() and instance method is connect to object such as 
-Promise.all() , Promise.any() , Promise.race() , Promise.allset()
+Promise.all() , Promise.any() , Promise.race() , Promise.allsettled()
 
 Promise.all() will be immediate sucess but if one api fail so another will be not allowed!
