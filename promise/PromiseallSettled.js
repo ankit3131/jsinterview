@@ -6,7 +6,7 @@ Promise.allSettled([Promise1,Promise2,Promise3])
 .then(([result1,result2,result3]) => {
 
     console.log(result1);
-    if(!result1.ok , !result2.ok , !result3.ok) {
+    if(!result1.ok || !result2.ok || !result3.ok) {
 throw new Error(`"error come" , ${result1.status}`)
     }
 return Promise.allSettled(
