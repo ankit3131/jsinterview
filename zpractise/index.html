@@ -8,21 +8,26 @@
 <body>
     <script>
   
-function outer() {
-  debugger;
-let count = 0;
-function inner() {
-   debugger;
-  count++;
-  console.log(count);
-}
-return inner;
-}
+// function outer() {
+//   debugger;
+// let count = 0;
+// function inner() {
+//    debugger;
+//   count++;
+//   console.log(count);
+// }
+// return inner;
+// }
 
-let result = outer();
-result();
-result();
-result();
+// let result = outer();
+// result();
+// result();
+// result();
+
+let arr = [10,10,20,30]
+let arr1 = [];
+let filter = arr.filter((key) => !arr1.includes(key));
+console.log(filter)
     </script>
 </body>
 </html>
