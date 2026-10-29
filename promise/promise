@@ -6,3 +6,5 @@ Promise is special object inside use static method and instance method. static m
 Promise.all() , Promise.any() , Promise.race() , Promise.allsettled()
 
 Promise.all() will be immediate sucess but if one api fail so another will be not allowed!
+
+Promise.allSettled is immediate all value api success however api success and failed important return format {status , value}
