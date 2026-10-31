@@ -26,8 +26,15 @@
 
 let arr = [10,10,20,30]
 let arr1 = [];
-let filter = arr.filter((key) => !arr1.includes(key));
-console.log(filter)
+let filter = arr.filter((key) => {
+if(!arr1.includes(key)) {
+arr1.push(key);
+return true;
+}
+}
+
+    )
+    console.log(filter)
     </script>
 </body>
 </html>
