@@ -1,0 +1,3 @@
+async is waites time inside Promise
+
+await is a wait for async after that excute code.
