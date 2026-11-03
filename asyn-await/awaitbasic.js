@@ -13,4 +13,3 @@ let output = getData();
 output.then((data) => console.log(data));
 
 // output:- resolve two (without await)
-
