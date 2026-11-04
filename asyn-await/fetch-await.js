@@ -6,6 +6,6 @@ async function getData()
         console.log(data);
     }
 
-catch(error) console.log("error" ,error)
+catch(error) {console.log("error" ,error)}
 } 
 getData()

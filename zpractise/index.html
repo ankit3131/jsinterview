@@ -24,17 +24,31 @@
 // result();
 // result();
 
-let arr = [10,10,20,30]
-let arr1 = [];
-let filter = arr.filter((key) => {
-if(!arr1.includes(key)) {
-arr1.push(key);
-return true;
-}
-}
+// let arr = [10,10,20,30]
+// let arr1 = [];
+// let filter = arr.filter((key) => {
+// if(!arr1.includes(key)) {
+// arr1.push(key);
+// return true;
+// }
+// }
 
-    )
-    console.log(filter)
+//     )
+//     console.log(filter)
+
+
+
+const arr = [1, 2, 3, 4, 5];
+let arr1 = [];
+for(let i=0;i<arr.length;i++) {
+for(let j=arr.length-1;j>0;j--) {
+  debugger;
+if(!arr1.includes(arr[i]) , arr[j] && !arr1.includes(arr[i]) && !arr1.includes(arr[j])) {
+ arr1.push(arr[i] , arr[j]);
+}
+}
+}
+console.log(arr1);
     </script>
 </body>
 </html>

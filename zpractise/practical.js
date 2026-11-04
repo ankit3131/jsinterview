@@ -580,19 +580,19 @@
 // count:-2
 // count:-3
 
-function outer() {
-  let count = 0;
-  function inner() {
-count++;
-if(count === 3) {
-console.log(count)
-}}
-  return inner;
-}
-let result = outer();
-result();
-result();
-result();
+// function outer() {
+//   let count = 0;
+//   function inner() {
+// count++;
+// if(count === 3) {
+// console.log(count)
+// }}
+//   return inner;
+// }
+// let result = outer();
+// result();
+// result();
+// result();
 // output:-3
 // output:-
 // 1
@@ -612,12 +612,24 @@ result();
 // output:- sum is: 30
 
 
-let sum = (add) => {
-console.log(add);
-}
-let calculate = (a, b, callback) => {
-let sum = a+b;
-callback(sum);
-}
-calculate(10 , 20 , sum)
+// let sum = (add) => {
+// console.log(add);
+// }
+// let calculate = (a, b, callback) => {
+// let sum = a+b;
+// callback(sum);~
+// }
+// calculate(10 , 20 , sum)
 // output:- sum is: 30
+const arr = [1, 2, 3, 4, 5];
+let arr1 = [];
+let arr2 = [];
+for(let i=0;i<arr.length;i++) {
+for(let j=arr.length-1;j>0;j--) {
+  debugger;
+if(!arr1.includes((arr[i]) , arr[j]) && !arr1.includes(arr[i]) && !arr1.includes(arr[j])) {
+ arr1.push(arr[i] , arr[j]);
+}
+}
+}
+console.log(arr1);
