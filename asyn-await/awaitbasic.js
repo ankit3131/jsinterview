@@ -2,7 +2,6 @@ function getData() {
     return (
         new Promise ((result) => {
         setTimeout( () => {
-            
             result('resolve two')
         } ,3000)
     }
