@@ -8,3 +8,7 @@ Promise.all() , Promise.any() , Promise.race() , Promise.allsettled()
 Promise.all() will be immediate sucess but if one api fail so another will be not allowed!
 
 Promise.allSettled is immediate all value api success however api success and failed important return format {status , value}
+
+Promise.any is multipale api where api sucess first will be api sucess
+
+Primise.race is multipale api only first api whether failed and sucess!

@@ -2,7 +2,7 @@ const promise1 = Promise.reject("Result1")
 const promise2 = Promise.resolve("Result2")
 const promise3 = Promise.reject("Result3")
 
-Promise.allSettled([promise1, promise2, promise3])
+Promise.race([promise1, promise2, promise3])
 .then((resolve) => {
     console.log(resolve)
 }
