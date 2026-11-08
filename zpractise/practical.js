@@ -625,6 +625,8 @@ const arr = [1, 2, 3, 4, 5];
 let arr1 = [];
 let arr2 = [];
 for(let i=0;i<arr.length;i++) {
+  debugger;
+  arr1[i] = [];
 for(let j=arr.length-1;j>0;j--) {
   debugger;
 if(!arr1.includes((arr[i]) , arr[j]) && !arr1.includes(arr[i]) && !arr1.includes(arr[j])) {
@@ -633,3 +635,14 @@ if(!arr1.includes((arr[i]) , arr[j]) && !arr1.includes(arr[i]) && !arr1.includes
 }
 }
 console.log(arr1);
+
+// const table = [];
+// const size = 3;
+
+// for (let i = 0; i < size; i++) {
+//   table[i] = []; // Initialize the sub-array
+//   for (let j = 0; j < size; j++) {
+//     table[i].push(i * j); // Add values
+//   }
+// }
+// console.log(table)
