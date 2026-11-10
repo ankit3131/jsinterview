@@ -28,10 +28,11 @@
 // let wait = await response.json();
 
 
-async function getUserAndPost(api1 , api2) {
+async function getUserAndPost() {
     try {
       
 const [response1 , response2] = await Promise.all([api1,api2])
+console.log("response1--", response1)
     if(!response1.ok  || !response2.ok) {
 throw new Error(`error coming , ${response1.status} and ${response2.status}`);
         }
