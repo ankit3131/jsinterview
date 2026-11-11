@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <input type="text" id="searchBox" placeholder="Type to search (e.g. phone)..." onkeyup="debounceSearch()">
+    <script>
+                async function searchProducts(query) {
+        try {
+                // let query = await fetch(url);
+            if(!query.ok) {
+                throw new Error(`error , ${query.status}`)
+            }
+        let response = await query.json();
+    console.log("response111" ,response)
+        }
+        catch (error) {
+        console.log(`error api fetch , ${error.message}`)
+        }
+        finally {
+        console.log("api response completed")
+        }
+        }
+
+    function debounceSearch () {
+        let timer;
+        clearTimeout(timer)
+        let text = document.getElementById("searchBox").value;  
+    timer = setTimeout(async () => {
+           try {
+    let query = await fetch(`https://dummyjson.com/products/{text}`);
+    searchProducts(query);
+  } catch (networkError) {
+    console.log("Network error:", networkError.message);
+  }
+    } , 1000)
+     }
+        </script>
+</body>
+</html>
