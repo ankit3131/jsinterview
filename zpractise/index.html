@@ -38,22 +38,40 @@
 
 
 
+// const arr = [1, 2, 3, 4, 5];
+// let arr1 = [];
+// let arr2 = [];
+// for(let i=0;i<arr.length;i++) {
+//   debugger;
+//   arr1[i] = [];
+// for(let j=arr.length-1;j>0;j--) {
+//   debugger;
+// if(!arr1.includes((arr[i]) , arr[j]) && !arr1.includes(arr[i]) && !arr1.includes(arr[j])) {
+//  arr1[i].push(arr[i] , arr[j]);
+//  j--;
+// }
+// }
+// }
+// console.log(arr1);
+
+
 const arr = [1, 2, 3, 4, 5];
-let arr1 = [];
-let arr2 = [];
-for(let i=0;i<arr.length;i++) {
-  debugger;
+ let arr1 = []
+ let arr2 = []
+ for(let i=0;i<arr.length;i++) {
   arr1[i] = [];
-for(let j=arr.length-1;j>0;j--) {
   debugger;
-if(!arr1.includes((arr[i]) , arr[j]) && !arr1.includes(arr[i]) && !arr1.includes(arr[j])) {
- arr1[i].push(arr[i] , arr[j]);
- j--;
- break;
+  for(let j=arr.length-1;j>0;j--) {
+  if(!arr1.includes((arr[i])) && !arr2.includes(arr[j])) {
+    debugger;
+    arr1[i].push(arr[i] , arr[j]);
+    break;
+  }  
+ }
 }
-}
-}
-console.log(arr1);
+ console.log(arr1);
+// output:-[[1,5],[2,4]]
+
     </script>
 </body>
 </html>
