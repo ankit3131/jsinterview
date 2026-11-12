@@ -8,6 +8,7 @@
 <body>
       <input type="text" id="searchBox" placeholder="Type to search (e.g. phone)..." onkeyup="debounceSearch()">
     <script>
+          let timer;
                 async function searchProducts(query) {
         try {
                 // let query = await fetch(url);
@@ -26,12 +27,13 @@
         }
 
     function debounceSearch () {
-        let timer;
+         
         clearTimeout(timer)
         let text = document.getElementById("searchBox").value;  
     timer = setTimeout(async () => {
            try {
-    let query = await fetch(`https://dummyjson.com/products/{text}`);
+              // 2. Added '/products/search?q=' and '$' before '{text}'
+    let query = await fetch(`https://dummyjson.com/products/search?q=${text}`);
     searchProducts(query);
   } catch (networkError) {
     console.log("Network error:", networkError.message);
