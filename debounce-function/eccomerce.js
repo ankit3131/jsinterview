@@ -1,9 +1,9 @@
+let time;
 function debounce(callback , time) {
-    debugger;
-    let timer;
-clearTimeout(timer);
+    debugger; 
 function name(value){
-timer = setTimeout(() => {
+    clearTimeout(time);
+time = setTimeout(() => {
 callback(value);
 }, time)
 }
@@ -17,3 +17,5 @@ console.log(value)
 }, 1000)
 
 searchUser("A");
+searchUser("An");
+searchUser("Ank");
