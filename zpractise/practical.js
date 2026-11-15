@@ -617,24 +617,24 @@
 // }
 // let calculate = (a, b, callback) => {
 // let sum = a+b;
-// callback(sum);~
+// callback(sum);
 // }
 // calculate(10 , 20 , sum)
 // output:- sum is: 30
-const arr = [1, 2, 3, 4, 5];
-let arr1 = [];
-let arr2 = [];
-for(let i=0;i<arr.length;i++) {
-  debugger;
-  arr1[i] = [];
-for(let j=arr.length-1;j>0;j--) {
-  debugger;
-if(!arr1.includes((arr[i]) , arr[j]) && !arr1.includes(arr[i]) && !arr1.includes(arr[j])) {
- arr1.push(arr[i] , arr[j]);
-}
-}
-}
-console.log(arr1);
+
+// const arr = [1, 2, 3, 4, 5];
+//  let arr1 = []
+//  let j = arr.length - 1;
+//  for(let i=0;i<=j;i++) {
+//  if(i === j){
+//     arr1.push([arr[i]])
+//  }
+//  else {
+//     arr1.push([arr[i] , arr[j]]);
+//  }
+//  j--
+//  }
+//  console.log(arr1);
 
 // const table = [];
 // const size = 3;
@@ -646,3 +646,74 @@ console.log(arr1);
 //   }
 // }
 // console.log(table)
+
+// const arr = [10,20,30,40,50]
+// const arr1 = [];
+// for(let i=arr.length-1;i>=0;i--) {
+//    arr1.push(arr[i])
+// }
+// console.log(arr1)
+
+// output:- [50,40,30,20,10]
+
+// const employees = [
+//   { name: "Rahul", salary: 25000 },
+//   { name: "Amit", salary: 40000 },
+//   { name: "Vijay", salary: 35000 }
+// ];
+
+// let highsalary = employees.reduce((accum , current) => {
+//    if(accum.salary >= current.salary) {
+//       return current;
+//    }
+//    return accum;
+// },[0])
+// console.log(highsalary)
+// Expected output:
+// { name: "Amit", salary: 40000 }
+
+
+// const arr = [1, 2, 3, 2, 4, 1, 5];
+// const arr1= [];
+// for(let i=0;i<arr.length;i++) {
+//    if(!arr1.includes(arr[i])) {
+//       arr1.push(arr[i])
+//    }
+// }
+// console.log(arr1);
+// Expected output:
+// [1, 2, 3, 4, 5]
+
+
+// const arr = [1, 2, 3, 2, 4, 1, 5];
+// let arr1 = arr.filter((value , index) => {
+//    if (arr[index] !== value)
+//    {
+//       debugger;
+//       return value;
+//    }
+// }
+//    ) 
+  
+// console.log(arr1);
+// Expected output:
+// [1, 2, 3, 4, 5]
+
+
+const arr = [10, 90 , 30, 80, 60];
+
+let max = 0;
+let min = -1;
+for(let i=0;i<arr.length;i++) {
+    if(arr[i] > max) {
+      debugger;
+      min = max;
+     max = arr[i]
+    }
+    else {
+      debugger;
+      max = arr[i]
+    }
+}
+console.log(max);
+// Output: 60

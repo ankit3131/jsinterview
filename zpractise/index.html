@@ -55,22 +55,71 @@
 // console.log(arr1);
 
 
-const arr = [1, 2, 3, 4, 5];
- let arr1 = []
- let arr2 = []
- for(let i=0;i<arr.length;i++) {
-  arr1[i] = [];
-  debugger;
-  for(let j=arr.length-1;j>0;j--) {
-  if(!arr1.includes((arr[i])) && !arr2.includes(arr[j])) {
-    debugger;
-    arr1[i].push(arr[i] , arr[j]);
-    break;
-  }  
- }
+// const arr = [1, 2, 3, 4, 5];
+//  let arr1 = []
+//  let j = arr.length - 1;
+//  for(let i=0;i<=j;i++) {
+//  if(i === j){
+//     arr1.push([arr[i]])
+//  }
+//  else {
+//     arr1.push([arr[i] , arr[j]]);
+//  }
+//  j--
+//  }
+// output:-[[1,5],[2,4],[3]]
+// const employees = [
+//   { name: "Rahul", salary: 50000 },
+//   { name: "Amit", salary: 40000 },
+//   { name: "Vijay", salary: 35000 }
+// ];
+
+// let highsalary = employees.reduce((accum , current) => {
+//    if(accum.salary >= current.salary) {
+//     debugger;
+//       return accum;
+//    }
+//    else {
+//     debugger
+//    return current;
+//    }
+// },)
+// console.log(highsalary)
+
+
+// const arr = [1, 2, 3, 2, 4, 1, 5];
+// let arr1 = arr.filter((value , index) => {
+//     debugger;
+//    if (arr.indexOf(value) === index)
+//    {
+//     debugger;
+//       return value;
+//    }
+// }
+//    ) 
+  
+// console.log(arr1);
+
+
+// Output: 60
+
+const arr = [10, 90, 30, 80, 60];
+
+let max = 0;
+let min = -1;
+for(let i=0;i<arr.length;i++) {
+    if(arr[i] > max) {
+      debugger;
+      min = max;
+     max = arr[i]
+    }
+    
+      if(arr[i] > max && arr[i] !== min) {
+      max = arr[i]
+      }
+    
 }
- console.log(arr1);
-// output:-[[1,5],[2,4]]
+console.log(max);
 
     </script>
 </body>
