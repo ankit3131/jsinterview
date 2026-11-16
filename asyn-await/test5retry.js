@@ -1,17 +1,23 @@
 async function fetchWithRetry(url , count) {
     try {
+         if(count == 0) {
+       throw new Error(`API try again`)
+    }
+    const response = await fetch(url);
+
         if(!url.ok) {
             throw new Error(`error , ${url.status}`)
         }
-let response = await url.json();
-console.log("response---" , response);
+            
+       
+let data = await response.json();
+console.log("response---" , data);
     }
     catch (error) {
-if(count === 0) {
 console.log(error.message)
-}
+
 console.log("retry coming" , count)
-count--;
+return await fetchWithRetry(url , count-1);
     }
     finally {
 console.log("Api response completed")
