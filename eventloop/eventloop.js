@@ -18,11 +18,12 @@ Promise.resolve().then(() => {
 
 console.log("F");
 
-// sync:- A ,F , C , D , B , E
+// output :- A ,F , C , D , B , E
 
 console.log("A");
 
 setTimeout(() => {
+    debugger;
     console.log("B");
 
     Promise.resolve().then(() => {
@@ -31,6 +32,7 @@ setTimeout(() => {
 }, 0);
 
 Promise.resolve().then(() => {
+    debugger;
     console.log("D");
 
     setTimeout(() => {
@@ -46,3 +48,89 @@ console.log("F");
 //2 Promise Micrtask queue "D" but First timer print "B" (schdule time E)
 //3 First Promise will be "C" before time was excute
 //4 last timer will be print "E"
+
+console.log("1");
+
+setTimeout(() => {
+    console.log("2");
+
+    Promise.resolve().then(() => {
+        console.log("3");
+    });
+
+    console.log("4");
+}, 0);
+
+Promise.resolve().then(() => {
+    console.log("5");
+
+    setTimeout(() => {
+        console.log("6");
+    }, 0);
+});
+
+Promise.resolve().then(() => {
+    console.log("7");
+});
+
+console.log("8");
+
+// output :- "1" , "8" , "5" , "7" , "2" , "4" , "3" , "6"
+
+// firstly sync "1" , "8"
+// first promise "5" , "7" , micrstask and then wait time mico-queue "2" , same block "4" , and then microtask - queue"3" 
+// last one will print last time print will be finishe"6"
+
+
+console.log("Start");
+
+process.nextTick(() => {
+    console.log("NextTick");
+});
+
+Promise.resolve().then(() => {
+    console.log("Promise");
+});
+
+setTimeout(() => {
+    console.log("Timeout");
+}, 0);
+
+console.log("End");
+
+// output:- "Start" , "End" , "Promise" , "NextTick" , "Timeout"
+
+// firstly will be print:- "Start" and "End" is sync
+// second Microtask queue "Promise" and "NextTick"
+// third Micro queue "Timeout" 
+
+
+console.log("A");
+
+process.nextTick(() => {
+    console.log("B");
+
+    Promise.resolve().then(() => {
+        console.log("C");
+    });
+});
+
+Promise.resolve().then(() => {
+    console.log("D");
+
+    process.nextTick(() => {
+        console.log("E");
+    });
+});
+
+setTimeout(() => {
+    console.log("F");
+}, 0);
+
+console.log("G");
+
+// output:- "A" , "G" , "B" , "C" ,  "D" , "E", "F"
+// first "A" , "G" will be sync print
+// Second:- 1st nectTick will be print "B" indside wait "C"
+// Third:- "D" and then wait time "C"
+// four:- Setimeout should be print "F"
