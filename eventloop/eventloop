@@ -1,0 +1,25 @@
+event-loop is manage task microtask Queue and Task Queue which is preffered on Work.
+
+call-satck is single threading work async and sync to mange task and then excute code.
+
+for-example
+
+console.log("Start");
+
+setTimeout(() => {
+    console.log("Timeout");
+}, 0);
+
+Promise.resolve().then(() => {
+    console.log("Promise");
+});
+
+console.log("End");
+
+// output:-
+start , End , Promise , Timeout
+
+Becuase start and End sync work and Promise microtask queue then Queue and last Timeout Queue task.
+
+// golden rules:-
+When call back finshes , javascript process pending microtask before excute the next timer callback
