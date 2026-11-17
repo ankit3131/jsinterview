@@ -105,32 +105,118 @@ console.log("End");
 // third Micro queue "Timeout" 
 
 
-console.log("A");
+// console.log("A");
 
-process.nextTick(() => {
-    console.log("B");
+// process.nextTick(() => {
+//     console.log("B");
 
-    Promise.resolve().then(() => {
-        console.log("C");
-    });
-});
+//     Promise.resolve().then(() => {
+//         console.log("C");
+//     });
+// });
 
-Promise.resolve().then(() => {
-    console.log("D");
+// Promise.resolve().then(() => {
+//     console.log("D");
 
-    process.nextTick(() => {
-        console.log("E");
-    });
-});
+//     process.nextTick(() => {
+//         console.log("E");
+//     });
+// });
 
-setTimeout(() => {
-    console.log("F");
-}, 0);
+// setTimeout(() => {
+//     console.log("F");
+// }, 0);
 
-console.log("G");
+// console.log("G");
 
 // output:- "A" , "G" , "B" , "C" ,  "D" , "E", "F"
 // first "A" , "G" will be sync print
 // Second:- 1st nectTick will be print "B" indside wait "C"
 // Third:- "D" and then wait time "C"
 // four:- Setimeout should be print "F"
+
+// console.log("Start");
+
+// setTimeout(() => {
+//     console.log("A");
+// }, 0);
+
+// Promise.resolve().then(() => {
+//     console.log("B");
+
+//     Promise.resolve().then(() => {
+//         console.log("C");
+//     });
+// });
+
+// queueMicrotask(() => {
+//     console.log("D");
+// });
+
+// console.log("End");
+
+// Output:- "First" , "End" , "B" , "C" , "D" , "A"
+
+
+// console.log("1");
+
+// async function test() {
+//     console.log("2");
+
+//     await Promise.resolve();
+
+//     console.log("3");
+// }
+
+// test();
+
+// Promise.resolve().then(() => {
+//     console.log("4");
+// });
+
+// setTimeout(() => {
+//     console.log("5");
+// }, 0);
+
+// console.log("6");
+
+// Firstly 1 will be excute 
+// asyn await test(); so inner will be print 2 but outside will be print 6
+// now indise test() print 3
+// Promise second will be print 4 
+// last one timeout finised 5
+//  1 , 2 , 6 , 3 , 4 , 5
+
+console.log("Start");
+
+async function first() {
+    console.log("A");
+
+    await Promise.resolve();
+
+    console.log("B");
+
+    await Promise.resolve();
+
+    console.log("C");
+}
+
+async function second() {
+    console.log("D");
+
+    await Promise.resolve();
+
+    console.log("E");
+}
+
+first();
+second();
+
+console.log("End");
+
+// firsly "Start"  sync
+// second first() inside use "A" sync , after wait second() inside "D" sync
+// third wait first() "B" and then wait second() "E"
+// fourth last "C"
+
+// "Start" , "A" , "D" , "End"  , "B" , "E" , "C" , 
