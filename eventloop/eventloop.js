@@ -187,36 +187,67 @@ console.log("End");
 // last one timeout finised 5
 //  1 , 2 , 6 , 3 , 4 , 5
 
-console.log("Start");
+// console.log("Start");
 
-async function first() {
-    console.log("A");
+// async function first() {
+//     console.log("A");
 
-    await Promise.resolve();
+//     await Promise.resolve();
 
-    console.log("B");
+//     console.log("B");
 
-    await Promise.resolve();
+//     await Promise.resolve();
 
-    console.log("C");
-}
+//     console.log("C");
+// }
 
-async function second() {
-    console.log("D");
+// async function second() {
+//     console.log("D");
 
-    await Promise.resolve();
+//     await Promise.resolve();
 
-    console.log("E");
-}
+//     console.log("E");
+// }
 
-first();
-second();
+// first();
+// second();
 
-console.log("End");
+// console.log("End");
 
 // firsly "Start"  sync
 // second first() inside use "A" sync , after wait second() inside "D" sync
 // third wait first() "B" and then wait second() "E"
 // fourth last "C"
 
-// "Start" , "A" , "D" , "End"  , "B" , "E" , "C" , 
+// "Start" , "A" , "D" , "End"  , "B" , "E" , "C"
+
+
+console.log("Start");
+
+async function getData() {
+    console.log("A");
+
+    await Promise.resolve();
+
+    console.log("B");
+
+    Promise.resolve().then(() => {
+        console.log("C");
+    });
+
+    console.log("D");
+}
+
+getData();
+
+Promise.resolve().then(() => {
+    console.log("E");
+});
+
+setTimeout(() => {
+    console.log("F");
+}, 0);
+
+console.log("End");
+
+// "START" , "A" , "END" , "B" , "D" , "E" , "C" , "F"
