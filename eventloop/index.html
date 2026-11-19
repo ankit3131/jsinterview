@@ -7,28 +7,20 @@
 </head>
 <body>
     <script>
-        
-console.log("A");
+  console.log("Start");
 
-setTimeout(() => {
+async function getUsers() {
     debugger;
-    console.log("B");
+    console.log("Fetching users");
 
-    Promise.resolve().then(() => {
-        console.log("C");
-    });
-}, 0);
+    const response = await fetch("/api/users");
 
-Promise.resolve().then(() => {
-    debugger;
-    console.log("D");
+    console.log("Users received");
+}
 
-    setTimeout(() => {
-        console.log("E");
-    }, 0);
-});
+getUsers();
 
-console.log("F");
+    console.log("End");
     </script>
 </body>
 </html>
