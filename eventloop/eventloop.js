@@ -252,21 +252,21 @@ console.log("End");
 
 // "START" , "A" , "END" , "B" , "D" , "E" , "C" , "F"
 
-    async function test() {
-        console.log("A");
+    // async function test() {
+    //     console.log("A");
 
-        await Promise.resolve();
+    //     await Promise.resolve();
 
-        console.log("B");
+    //     console.log("B");
 
-        Promise.resolve().then(() => console.log("C"));
+    //     Promise.resolve().then(() => console.log("C"));
 
-        console.log("D");
-    }
+    //     console.log("D");
+    // }
 
-    test();
+    // test();
 
-    Promise.resolve().then(() => console.log("E"));
+    // Promise.resolve().then(() => console.log("E"));
 
 // Output:-
 // firstly test() sync "A"
@@ -274,3 +274,73 @@ console.log("End");
 // Thirwill be print output "B" , and then c will wait and Will be excute "D"
 // Finally will be print "C"
 // "A" , "B" , "D" , "E" , "C"
+
+
+// console.log("Start");
+
+// async function second() {
+//     console.log("D");
+
+//     await Promise.resolve();
+
+//     console.log("E");
+// }
+
+// async function first() {
+//     console.log("A");
+
+//     await Promise.resolve();
+
+//     console.log("B");
+
+//     await Promise.resolve();
+
+//     console.log("C");
+// }
+
+
+
+
+// second();
+// first();
+
+// console.log("End");
+
+// firstly work "Start" sync first() call "A" , await "D" , "End" 
+// sync outside work and then already wait "B" 
+// again pause so await resume "E"  and last will be "C"
+
+// "Start" , "A" , "D" , "End" , "B" , "E" , "C"
+
+
+console.log("Start");
+
+async function first() {
+    console.log("A");
+
+    await Promise.resolve();
+
+    console.log("B");
+
+    setTimeout(() => {
+        console.log("C");
+    }, 0);
+
+    await Promise.resolve();
+
+    console.log("D");
+}
+
+Promise.resolve().then(() => {
+    console.log("E");
+});
+
+first();
+
+setTimeout(() => {
+    console.log("F");
+}, 0);
+
+console.log("End");
+
+// "Start" , "A" , "End" , "E" , "B" , "D" , "F" , "C"
