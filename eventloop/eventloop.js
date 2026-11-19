@@ -222,32 +222,55 @@ console.log("End");
 // "Start" , "A" , "D" , "End"  , "B" , "E" , "C"
 
 
-console.log("Start");
+// console.log("Start");
 
-async function getData() {
-    console.log("A");
+// async function getData() {
+//     console.log("A");
 
-    await Promise.resolve();
+//     await Promise.resolve();
 
-    console.log("B");
+//     console.log("B");
 
-    Promise.resolve().then(() => {
-        console.log("C");
-    });
+//     Promise.resolve().then(() => {
+//         console.log("C");
+//     });
 
-    console.log("D");
-}
+//     console.log("D");
+// }
 
-getData();
+// getData();
 
-Promise.resolve().then(() => {
-    console.log("E");
-});
+// Promise.resolve().then(() => {
+//     console.log("E");
+// });
 
-setTimeout(() => {
-    console.log("F");
-}, 0);
+// setTimeout(() => {
+//     console.log("F");
+// }, 0);
 
-console.log("End");
+// console.log("End");
 
 // "START" , "A" , "END" , "B" , "D" , "E" , "C" , "F"
+
+    async function test() {
+        console.log("A");
+
+        await Promise.resolve();
+
+        console.log("B");
+
+        Promise.resolve().then(() => console.log("C"));
+
+        console.log("D");
+    }
+
+    test();
+
+    Promise.resolve().then(() => console.log("E"));
+
+// Output:-
+// firstly test() sync "A"
+// Second inside test() await "B" outside will be print "E"
+// Thirwill be print output "B" , and then c will wait and Will be excute "D"
+// Finally will be print "C"
+// "A" , "B" , "D" , "E" , "C"
