@@ -344,3 +344,35 @@ setTimeout(() => {
 console.log("End");
 
 // "Start" , "A" , "End" , "E" , "B" , "D" , "F" , "C"
+
+
+console.log("Page Loading");
+
+async function getProducts() {
+    console.log("Products Started");
+
+    await Promise.resolve();
+
+    console.log("Products Loaded");
+}
+
+async function getCategories() {
+    console.log("Categories Started");
+
+    await Promise.resolve();
+
+    console.log("Categories Loaded");
+}
+
+setTimeout(() => {
+    console.log("Offers Loaded");
+}, 0);
+
+getProducts();
+
+getCategories();
+
+console.log("Page Ready");
+
+
+// "Page Loading" , "Products Started" , "Categories Started" , "Page Ready"  , "Products Loaded" , "Categories Loaded" , "Offers Loaded"
