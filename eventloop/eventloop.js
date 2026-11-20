@@ -346,33 +346,69 @@ console.log("End");
 // "Start" , "A" , "End" , "E" , "B" , "D" , "F" , "C"
 
 
-console.log("Page Loading");
+// console.log("Page Loading");
 
-async function getProducts() {
-    console.log("Products Started");
+// async function getProducts() {
+//     console.log("Products Started");
 
-    await Promise.resolve();
+//     await Promise.resolve();
 
-    console.log("Products Loaded");
-}
+//     console.log("Products Loaded");
+// }
 
-async function getCategories() {
-    console.log("Categories Started");
+// async function getCategories() {
+//     console.log("Categories Started");
 
-    await Promise.resolve();
+//     await Promise.resolve();
 
-    console.log("Categories Loaded");
-}
+//     console.log("Categories Loaded");
+// }
 
-setTimeout(() => {
-    console.log("Offers Loaded");
-}, 0);
+// setTimeout(() => {
+//     console.log("Offers Loaded");
+// }, 0);
 
-getProducts();
+// getProducts();
 
-getCategories();
+// getCategories();
 
-console.log("Page Ready");
+// console.log("Page Ready");
 
 
 // "Page Loading" , "Products Started" , "Categories Started" , "Page Ready"  , "Products Loaded" , "Categories Loaded" , "Offers Loaded"
+
+console.log("Login Started");
+
+async function getProfile() {
+    console.log("Profile API Started");
+
+    await new Promise((resolve) => setTimeout(resolve, 0));
+
+    console.log("Profile API Completed");
+
+    await new Promise((resolve) => setTimeout(resolve, 0));
+
+    console.log("Profile UI Updated");
+}
+
+async function getDashboard() {
+    console.log("Dashboard API Started");
+
+    await new Promise((resolve) => setTimeout(resolve, 0));
+
+    console.log("Dashboard API Completed");
+}
+
+getProfile();
+
+setTimeout(() => {
+    console.log("Notification Received");
+}, 0);
+
+getDashboard();
+
+console.log("Login Completed");
+
+
+// "Login Started" , "Profile API Started"  , "Dashboard API Started" , "Login Completed" ,  "Profile API Completed" ,  Profile UI Updated"   , "Dashboard API Completed" , "Notification Received"
+
