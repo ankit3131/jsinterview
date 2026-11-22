@@ -700,20 +700,95 @@
 // [1, 2, 3, 4, 5]
 
 
-const arr = [10, 90 , 30, 80, 60];
+// const arr = [10, 90 , 30, 80, 60];
 
-let max = 0;
-let min = -1;
-for(let i=0;i<arr.length;i++) {
-    if(arr[i] > max) {
-      debugger;
-      min = max;
-     max = arr[i]
-    }
-    else {
-      debugger;
-      max = arr[i]
-    }
-}
-console.log(max);
+// let max = 0;
+// let min = -1;
+// for(let i=0;i<arr.length;i++) {
+//     if(arr[i] > max) {
+//       debugger;
+//       min = max;
+//      max = arr[i]
+//     }
+//     else {
+//       debugger;
+//       max = arr[i]
+//     }
+// }
+// console.log(max);
 // Output: 60
+
+// const arr = [1, 2, 3, 2, 4, 1, 5];
+// let max = -Infinity;
+// let secondmax = -Infinity;
+// for(let i=0;i<arr.length;i++) {
+//     if(arr[i] > max) {
+//         secondmax = max;
+//         max = arr[i]
+//     }
+//     else if(arr[i] > secondmax && arr[i] !== max) {
+//         secondmax = arr[i]
+//     }
+// }
+// console.log(secondmax);
+// output:- 4
+
+// const arr = [10, 20, 30, 40, 60];
+// let num = 10;
+// let final = 0;
+// for(let i=0;i<arr.length;i++) {
+//     for(let j=i+1;j<arr.length;j++) {
+//         if(arr[j] - arr[i] === 10) {
+//             debugger;
+// num = num + 10;
+// break;
+//         }
+//         else {
+//             num = num + 10;
+//           final = num;
+//             break;
+//         }
+//     }
+// }
+// console.log(final);
+
+// output-50
+
+// const arr = [0, 1, 0, 3, 12];
+// let firstvalue = [];
+// let secondvalue = [];
+// let finalvalue = [];
+
+// for(let i=0;i<arr.length;i++) {
+//   if(arr[i] === 0) {
+//     firstvalue.push(arr[i])
+//   }
+//   else if(arr[i] !== 0) {
+// secondvalue.push(arr[i])
+//   }
+
+
+// }
+//  finalvalue.push(...secondvalue , ...firstvalue)
+// console.log(finalvalue)
+
+// Expected output:
+// [1, 3, 12, 0, 0]
+
+const arr = [10, 5, 20, 8, 10];
+let smallest = 0;
+let maximum = 0;
+let diffrent = 0;
+
+for(let i=0;i<arr.length;i++) {
+  debugger;
+  if(arr[i] < smallest) {
+smallest = arr[i];
+  }
+  else if(arr[i] > smallest && smallest < arr[i-1]){
+    debugger;
+    maximum = arr[i];
+  }
+}
+diffrent =  maximum - smallest;
+console.log(diffrent);
