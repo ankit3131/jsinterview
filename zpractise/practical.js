@@ -775,20 +775,46 @@
 // Expected output:
 // [1, 3, 12, 0, 0]
 
-const arr = [10, 5, 20, 8, 10];
-let smallest = 0;
-let maximum = 0;
-let diffrent = 0;
+// const arr = [10, 5, 20, 8, 10];
+// let smallest = 0;
+// let maximum = 0;
+// let diffrent = 0;
+
+// for(let i=0;i<arr.length;i++) {
+//   debugger;
+//   if(arr[i] < smallest) {
+// smallest = arr[i];
+//   }
+//   else if(arr[i] > smallest && smallest < arr[i-1]){
+//     debugger;
+//     maximum = arr[i];
+//   }
+// }
+// diffrent =  maximum - smallest;
+// console.log(diffrent);
+
+// const arr = [10, 20, 5, 30, 15];
+// let max = 0;
+
+// for(let i=0;i<arr.length;i++) {
+//   debugger;
+//     if(arr[i] > max)
+//  {
+// max = arr[i];
+//  }}
+// console.log(max);
+
+// output:- 30
+
+const arr = [40, 20, 5, 30, 15];
+let min = 0;
 
 for(let i=0;i<arr.length;i++) {
   debugger;
-  if(arr[i] < smallest) {
-smallest = arr[i];
-  }
-  else if(arr[i] > smallest && smallest < arr[i-1]){
-    debugger;
-    maximum = arr[i];
-  }
+    if(min < arr[i])
+ {
+min = arr[i]
 }
-diffrent =  maximum - smallest;
-console.log(diffrent);
+}
+console.log(min);
+// Expected output: 5
