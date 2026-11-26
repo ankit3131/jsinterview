@@ -1,18 +1,20 @@
-regulor function(this keyword):- This keyword use own keyword.
-let user = {
-    name:"ankit",
-    details: function() {
-         console.log(this.name)
-    }
-} 
-user.details();
+// regulor function(this keyword):- This keyword use own keyword.
+// let user = {
+//     name:"ankit",
+//     details: function() {
+//          console.log(this.name)
+//     }
+// } 
+// user.details();
 // "Ankit"
 
-Arrow function(this keyword):- This keyword not own keyword.
-let user = {
-    name:"ankit",
-    details: () => {
-        console.log(this.user)
-    }
-}
-user.details();
+
+
+// Arrow function(this keyword):- This keyword not own keyword.
+// let user = {
+//     name:"ankit",
+//     details: () => {
+//         console.log(this.user)
+//     }
+// }
+// user.details();
