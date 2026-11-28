@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <script>
+    <script type = "module">
 //         let user = {
 //     name:"ankit",
 //     details: function() {
@@ -15,13 +15,20 @@
 // } 
 // user.details();
 
-let user = {
-    name:"ankit",
-    details: () => {
-        console.log(this.user)
-    }
+async function user() {
+const response = await fetch('https://dummyjson.com/products')
+const data = await response.json();
+let count = 0;
+const filters = data.products.filter((value) => {
+    debugger;
+if(value.price > count) {
+count = value.price;
 }
-user.details();
+return count;
+})
+console.log("filters" , count)
+}
+user();
     </script>
 </body>
 </html>
